@@ -1,0 +1,82 @@
+﻿@model PagedList.IPagedList<ThaiVietSmileTravel.Models.Framework.tbl_Tour>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var checktitle = Model.First();
+}
+
+<div style="padding-left: 15px;">
+    @if (checktitle.CategoryId == 1)
+    {
+        <h3>@ThaiVietSmileTravel.Globalization.Resource.TourNorthern</h3>
+    }
+    else if (checktitle.CategoryId == 2)
+    {
+        <h3>@ThaiVietSmileTravel.Globalization.Resource.TourCentral</h3>
+    }
+    else if (checktitle.CategoryId == 3)
+    {
+        <h3>@ThaiVietSmileTravel.Globalization.Resource.TourSouth</h3>
+    }
+    else
+    {
+        <h3>@ThaiVietSmileTravel.Globalization.Resource.TourForeign</h3>
+    }
+</div>
+
+
+
+@foreach (var item in Model)
+{
+    
+    <div class="col-sm-6 col-lg-6 col-md-6">
+        <div class="thumbnail">
+            <div class="caption">
+
+                <div class="col-sm-12 col-lg-12 col-md-12">
+                    <div class="headitem">
+                        @if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                        {
+                            <h4>@item.TenTourVN</h4>
+                        }
+                        else
+                        {
+                            if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                            {
+                                <h4>@item.TenTourVN</h4>
+                            }
+                            else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                            {
+                                <h4>@item.TenTourEN</h4>
+                            }
+                            else
+                            {
+                                <h4>@item.TenTourTL</h4>
+                            }
+                        }
+                    </div>
+
+                </div>
+                <div class="col-sm-12 col-lg-12 col-md-12 caption">
+                    <div class="col-sm-7 col-lg-7 col-md-7">
+                        <img src="@item.HinhAnh" style="height: 200px; margin-top: 10px;" />
+                    </div>
+                    <div class="col-sm-5 col-lg-5 col-md-5" style="height: 75%; float: left;">
+
+                        <h4>
+                            <label>@item.SoNgay @ThaiVietSmileTravel.Globalization.Resource.lblDay @item.SoDem @ThaiVietSmileTravel.Globalization.Resource.lblNight</label>
+                        </h4>
+                        <h4 class="text-item-number">$@item.DonGia</h4>
+                        <a class="btn btn-primary margin-top-button-item" href="@Url.Action("AddItem","Card", new { tourId = @item.Id, soLuong = 1 })">@ThaiVietSmileTravel.Globalization.Resource.btnAddShoping</a>
+                        <a class="btn btn-warning margin-top-button-item" href="@Url.Action("Detail", "Tour", new{ id = @item.Id})">@ThaiVietSmileTravel.Globalization.Resource.btnDetail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<div class="col-sm-9 col-lg-9 col-md-9">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { categoryId= checktitle.CategoryId, page }))
+</div>

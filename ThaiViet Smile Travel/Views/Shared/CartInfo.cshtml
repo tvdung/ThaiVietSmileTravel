@@ -1,0 +1,10 @@
+﻿@model List<ThaiViet_Smile_Travel.Models.CardItemModel>
+@{
+    ViewBag.Title = "Card";
+}
+<div class="shopcard">
+    <a href="@Url.Action("Index","Card")">
+        <span class="glyphicon glyphicon-shopping-cart"></span>
+        <span class="">@ThaiVietSmileTravel.Globalization.Resource.TitleShopCard: @Model.Count @ThaiVietSmileTravel.Globalization.Resource.lblTour</span>
+    </a>
+</div>

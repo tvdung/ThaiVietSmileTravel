@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "head";
+}
+
+<div class="col-md-9" style="height: 100px;">
+    <img src="~/Content/img/logo-w-800.png" class="img-responsive" />
+</div>
+<div class="col-md-3">
+    @*@using (Html.BeginForm("ChangeCulture", "Base"))
+        {*@
+    @*@Html.Hidden("returnUrl", Request.RawUrl)*@
+    @*@Html.DropDownList("valueCulture", new SelectList(new[] {
+            new {value="vi", text=ThaiVietSmileTravel.Globalization.Resource.Vietnames},
+            new {value="en", text=ThaiVietSmileTravel.Globalization.Resource.English},
+            new {value="th", text=ThaiVietSmileTravel.Globalization.Resource.ThaiLan},
+        }, "value", "text", Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture]), new { onchange = "this.form.submit();" })*@
+
+    <span style="float: right; margin-bottom: 10px;">
+        <a href="@Url.Action("ChangeCulture", "Base", new { valueCulture = "vi" , returnUrl = Request.RawUrl})">
+            <img src="~/Content/img/vn.png" />
+        </a>
+
+        <a href="@Url.Action("ChangeCulture", "Base", new { valueCulture = "th" , returnUrl = Request.RawUrl})">
+            <img src="~/Content/img/th.png" />
+        </a>
+        <a href="@Url.Action("ChangeCulture", "Base", new { valueCulture = "en" , returnUrl = Request.RawUrl})">
+            <img src="~/Content/img/en.png" />
+        </a>
+    </span>
+    @* } *@
+</div>

@@ -1,0 +1,291 @@
+/*!
+ * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+body {
+    background-color: #b4bf04;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.slide-image {
+    width: 100%;
+}
+
+.carousel-holder {
+    margin-bottom: 30px;
+}
+
+.carousel-control,
+.item {
+    border-radius: 4px;
+}
+
+.caption {
+    height: auto;
+    overflow: hidden;
+}
+
+    .caption h4 {
+        white-space: nowrap;
+    }
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+    .thumbnail .caption-full {
+        padding: 9px;
+        color: #333;
+    }
+
+footer {
+    margin: 30px 0;
+}
+
+.container-right {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.shopcard {
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 15px;
+    height: 50px;
+}
+
+.headitem {
+    background-color: bisque;
+    color: crimson;
+    border-radius: 5px;
+    height: 30px;
+}
+
+    .headitem h4 {
+        padding: 5px;
+        text-align: center;
+    }
+
+.text-item-number {
+    font-weight: bold;
+    color: orange;
+}
+
+.footer {
+    /*background-color: #e7e7e7;
+    border-radius: 3px;*/
+    float: right;
+}
+
+.textfooter p {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.background-content {
+    background-color: rgba(72, 150, 32, 0.2);
+    border-radius: 5px;
+}
+
+.margin-top-button-item {
+    margin-top: 15px;
+}
+
+.cbp-spmenu {
+    /*background: #47a3da;*/
+}
+
+    .cbp-spmenu h3 {
+        color: #ffffff;
+        font-size: 1.9em;
+        padding: 20px;
+        margin: 0;
+        font-weight: 300;
+        /*background: #0d77b6;*/
+    }
+
+    .cbp-spmenu a {
+        display: block;
+        color: #fff;
+        font-size: 1.1em;
+        font-weight: 300;
+    }
+
+        .cbp-spmenu a:hover {
+            background: #258ecd;
+            text-decoration: none;
+        }
+
+        .cbp-spmenu a:active {
+            background: #afdefa;
+            color: #47a3da;
+            text-decoration: none;
+        }
+
+.cbp-spmenu-vertical a {
+    /*border-bottom: 1px solid #258ecd;*/
+    padding: 1em;
+}
+
+#map_canvas {
+    width: 99%;
+    height: 200px;
+    border: solid 1px #ccc;
+}
+
+.block .block-title {
+    background: #ff773b;
+    padding: 12px 20px 13px 20px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 5px 5px 0 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.sf-menu-phone2 {
+    background: #6cc957;
+    padding-bottom: 20px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+
+    .sf-menu-phone2 li {
+        position: relative;
+        font-size: 17px;
+        font-weight: normal;
+        list-style: none;
+    }
+
+        .sf-menu-phone2 li.last {
+        }
+
+        .sf-menu-phone2 li a {
+            display: block;
+            border-bottom: solid 1px #8ae06f;
+            padding: 11px 50px 13px 20px;
+            color: #fff;
+        }
+
+            .sf-menu-phone2 li a:hover {
+                background: #77d462;
+                color: #fff;
+                text-decoration: none;
+            }
+
+    .sf-menu-phone2 > li.active > a {
+        background: #77d462;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .sf-menu-phone2 li li {
+        padding: 0 0 8px 15px;
+        border: 0;
+        background: url(../images/nav_arr.png) no-repeat 0 5px;
+        font-size: 13px;
+    }
+
+        .sf-menu-phone2 li li a {
+            padding: 0;
+            display: inline;
+            border: 0;
+            color: #fff;
+        }
+
+            .sf-menu-phone2 li li a:hover {
+                background: none;
+                color: #fff222;
+            }
+
+        .sf-menu-phone2 li li.active > a {
+            background: none;
+            color: #fff222;
+        }
+
+    .sf-menu-phone2 ul {
+        display: none;
+        padding: 23px 0 12px 21px;
+        margin: 0 0 0 0;
+        background: #66bf53;
+        border-bottom: solid 1px #8ae06f;
+    }
+
+    .sf-menu-phone2 li strong {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        font-size: 16px !important;
+        line-height: 44px !important;
+        text-align: center;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        background: #66bf53;
+    }
+
+    .sf-menu-phone2 > li > strong {
+        top: 0;
+        right: 0;
+        color: #fff;
+    }
+
+    .sf-menu-phone2 > li:hover > strong {
+        color: #fff;
+    }
+
+    .sf-menu-phone2 li strong:hover {
+        cursor: pointer;
+    }
+
+    .sf-menu-phone2 li strong:before {
+        content: "\f055";
+    }
+
+    .sf-menu-phone2 li strong.opened:before {
+        content: "\f056";
+    }
+
+    .sf-menu-phone2 > li > a:hover > strong {
+        text-decoration: none;
+    }
+
+
+* h3 {
+    font-weight: bold;
+}
+
+
+.input-group-contact {
+    padding: 10px;
+}
+
+.error-contact {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#GhiChu {
+    min-height: 103%;
+    width: 100%;
+}

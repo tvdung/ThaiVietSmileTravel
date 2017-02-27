@@ -1,0 +1,97 @@
+﻿@model ThaiVietSmileTravel.Models.Framework.tbl_About
+
+@{
+    ViewBag.Title = "EditAbout";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cập nhật nội dung giới thiệu</h2>
+
+@using (Html.BeginForm("EditAbout", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoiDungVN, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.NoiDungVN, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.NoiDungVN, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("NoiDungVN");
+            </script>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoiDungEN, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.NoiDungEN, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.NoiDungEN, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("NoiDungEN");
+            </script>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NoiDungTL, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.NoiDungTL, new
+                {
+                    htmlAttributes = new
+                    {
+                        @class = "form-control"
+                    }
+                })
+                @Html.ValidationMessageFor(model => model.NoiDungTL, "", new
+                {
+                    @class = "text-danger"
+                })
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("NoiDungTL");
+            </script>
+        </div>
+
+        @*<div class="form-group">
+            @Html.LabelFor(model => model.HinhAnh, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HinhAnh, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+            </div>
+        </div>*@
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Cập nhật" class="btn btn-primary" style="margin-bottom: 30px;" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

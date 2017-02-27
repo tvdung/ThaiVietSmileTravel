@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ThaiVietSmileTravel.Models.Framework.tbl_About>
+@{
+    ViewBag.Title = ThaiVietSmileTravel.Globalization.Resource.TitleAbout;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-bottom:20px;">
+    <div class="row">
+        <div class="col-md-8">
+            @foreach (var item in Model)
+            {
+                if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                {
+                    if (item.NoiDungVN != null)
+                    {
+                        @Html.Raw(item.NoiDungVN)
+                    }
+                }
+                else
+                {
+                    if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                    {
+                        if (item.NoiDungVN != null)
+                        {
+                            @Html.Raw(item.NoiDungVN)
+                        }
+                    }
+                    else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                    {
+                        if (item.NoiDungEN != null)
+                        {
+                            @Html.Raw(item.NoiDungEN)
+                        }
+
+                    }
+                    else
+                    {
+                        if (item.NoiDungTL != null)
+                        {
+                            @Html.Raw(item.NoiDungTL)
+                        }
+                    }
+                }
+            }
+        </div>
+
+        @*<div style="padding-left: 15px;">
+        <h3>@ThaiVietSmileTravel.Globalization.Resource.titleHeadAbout</h3>
+    </div>
+
+    <div class="col-sm-4 col-lg-4 col-md-4"><img src="~/Content/img/tvs-logo.jpg" class="img-responsive"></div>
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        @Html.Raw(@ThaiVietSmileTravel.Globalization.Resource.lblContentAbout)
+    </div>*@
+    </div>
+</div>

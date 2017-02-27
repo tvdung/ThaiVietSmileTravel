@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnAddShoping" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
+  <data name="btnContinue" xml:space="preserve">
+    <value>Continue Shopping</value>
+  </data>
+  <data name="btnDetail" xml:space="preserve">
+    <value>See details</value>
+  </data>
+  <data name="btnOrderTour" xml:space="preserve">
+    <value>Order tour</value>
+  </data>
+  <data name="btnUpdate" xml:space="preserve">
+    <value>Update number</value>
+  </data>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="lblAddress" xml:space="preserve">
+    <value>Adrress</value>
+  </data>
+  <data name="lblDateOrder" xml:space="preserve">
+    <value>Date order</value>
+  </data>
+  <data name="lblEmail" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="lblNameCustome" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="lblNoSelectTour" xml:space="preserve">
+    <value>No tour in your shopping cart. Please select tour</value>
+  </data>
+  <data name="lblNote" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="lblNoteOrderTour" xml:space="preserve">
+    <value>Note: the tour you do not need to pay online. His party will contact you after the deal is complete, proceed to direct payments</value>
+  </data>
+  <data name="lblPhone" xml:space="preserve">
+    <value>Phone number</value>
+  </data>
+  <data name="lblTour" xml:space="preserve">
+    <value>tour</value>
+  </data>
+  <data name="plhAddress" xml:space="preserve">
+    <value>Please input address</value>
+  </data>
+  <data name="plhDateOrder" xml:space="preserve">
+    <value>MM/dd/yyyy</value>
+  </data>
+  <data name="plhEmail" xml:space="preserve">
+    <value>Please input email</value>
+  </data>
+  <data name="plhNameCustome" xml:space="preserve">
+    <value>Please input full name</value>
+  </data>
+  <data name="plhNote" xml:space="preserve">
+    <value>Please input note</value>
+  </data>
+  <data name="plhPhone" xml:space="preserve">
+    <value>Please input phone number</value>
+  </data>
+  <data name="ThaiLan" xml:space="preserve">
+    <value>ThaiLan</value>
+  </data>
+  <data name="TitleAbout" xml:space="preserve">
+    <value>ABOUT</value>
+  </data>
+  <data name="TitleCategoryTour" xml:space="preserve">
+    <value>Store Categories</value>
+  </data>
+  <data name="TitleContact" xml:space="preserve">
+    <value>CONTACT US</value>
+  </data>
+  <data name="titleFeaturesTour" xml:space="preserve">
+    <value>Features Tour</value>
+  </data>
+  <data name="titleHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="TitleShopCard" xml:space="preserve">
+    <value>Shoping card</value>
+  </data>
+  <data name="TourCentral" xml:space="preserve">
+    <value>Tour Central</value>
+  </data>
+  <data name="TourForeign" xml:space="preserve">
+    <value>Tour Foreign</value>
+  </data>
+  <data name="TourNorthern" xml:space="preserve">
+    <value>Tour Northern</value>
+  </data>
+  <data name="TourSouth" xml:space="preserve">
+    <value>Tour South</value>
+  </data>
+  <data name="Vietnames" xml:space="preserve">
+    <value>Vietnames</value>
+  </data>
+  <data name="lblDay" xml:space="preserve">
+    <value>Days</value>
+  </data>
+  <data name="lblNight" xml:space="preserve">
+    <value>Night</value>
+  </data>
+  <data name="lblTourDetail" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="h3Contact" xml:space="preserve">
+    <value>Contact us</value>
+  </data>
+  <data name="lblContactQuestion" xml:space="preserve">
+    <value>Do you have questions or want more information?</value>
+  </data>
+  <data name="lblContentAbout" xml:space="preserve">
+    <value>&lt;h4 style="color:green"&gt;THAIVIET SMILE TRAVEL CO., LTD.&lt;/h4&gt;
+                &lt;ul&gt;
+					&lt;Li&gt; Make Tour Vietnam. All the experts in Vietnam &lt;/ li&gt;.
+					&lt;Li&gt; Make Tour. Vietnam - Vietnam - Central Vietnam &lt;/ li&gt;.
+					&lt;Li&gt; Task Group gained Services Group (the company is pleased to liaise authorities in Vietnam to be. Without cost) &lt;/ li&gt;.
+					&lt;Li&gt; A tour guide speaks English Mara Thailand reconciled customer care &lt;/ li&gt;.
+                    &lt;li&gt;Contact us at Mr.Long Thailand Tel 0876366396 - 00 984 916 745 457 Vietnam.&lt;/li&gt;
+                    &lt;li&gt;E-mail : thaivietsmiletravel@gmail.com&lt;/li&gt;
+                    &lt;li&gt;Skype : thaivietsmiletravel&lt;/li&gt;
+                    &lt;li&gt;ID Line : thaivietsmiletravel &lt;/li&gt;
+                    &lt;li style="color:green"&gt;Office in Hanoi&lt;/li&gt;
+                    &lt;li&gt;268 Nguyen Xien Str., Thanh Xuan Dist., Hanoi, Vietnam.&lt;/li&gt;
+                    &lt;li style="color:green"&gt;The branch in Da Nang&lt;/li&gt;
+                    &lt;li&gt;12 Bui Chat Str., Lien Chieu Dist., Danang, Vietnam.&lt;/li&gt;
+                &lt;/ul&gt;</value>
+  </data>
+  <data name="lblHeadContact" xml:space="preserve">
+    <value>&lt;h4 style="color:green"&gt;THAIVIET SMILE TRAVEL CO., LTD.&lt;/h4&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;Contact us at Mr.Long Thailand Tel 0876366396 - 00 984 916 745 457 Vietnam.&lt;/li&gt;
+                    &lt;li&gt;E-mail : thaivietsmiletravel@gmail.com&lt;/li&gt;
+                    &lt;li&gt;Skype : thaivietsmiletravel&lt;/li&gt;
+                    &lt;li&gt;ID Line : thaivietsmiletravel &lt;/li&gt;
+                    &lt;li style="color:green"&gt;Office in Hanoi&lt;/li&gt;
+                    &lt;li&gt;268 Nguyen Xien Str., Thanh Xuan Dist., Hanoi, Vietnam.&lt;/li&gt;
+                    &lt;li style="color:green"&gt;The branch in Da Nang&lt;/li&gt;
+                    &lt;li&gt;12 Bui Chat Str., Lien Chieu Dist., Danang, Vietnam.&lt;/li&gt;
+                &lt;/ul&gt;</value>
+  </data>
+  <data name="lblTitleInputFormContact" xml:space="preserve">
+    <value>Please fill out the form below and send to us, we will respond as soon as possible</value>
+  </data>
+  <data name="titleHeadAbout" xml:space="preserve">
+    <value>Travel Vietnam</value>
+  </data>
+  <data name="lblCountVisistor" xml:space="preserve">
+    <value>Visits site</value>
+  </data>
+  <data name="btnSend" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="oderTourSuccess" xml:space="preserve">
+    <value>You have successfully set tour. We will contact you.</value>
+  </data>
+  <data name="orderTourError" xml:space="preserve">
+    <value>Booking unsuccessful. Please oder again</value>
+  </data>
+  <data name="plhEnterAdress" xml:space="preserve">
+    <value>Please enter adress</value>
+  </data>
+  <data name="plhEnterCompany" xml:space="preserve">
+    <value>Please enter company</value>
+  </data>
+  <data name="plhEnterEmail" xml:space="preserve">
+    <value>Please enter email</value>
+  </data>
+  <data name="plhEnterFirtName" xml:space="preserve">
+    <value>Please enter first name</value>
+  </data>
+  <data name="plhEnterLastName" xml:space="preserve">
+    <value>Please enter last name</value>
+  </data>
+  <data name="plhEnterMesseage" xml:space="preserve">
+    <value>Please enter your message here</value>
+  </data>
+  <data name="plhEnterPhone" xml:space="preserve">
+    <value>Please enter phone</value>
+  </data>
+  <data name="sendContactError" xml:space="preserve">
+    <value>Send contact failed. Please resubmit</value>
+  </data>
+  <data name="sendContactSuccess" xml:space="preserve">
+    <value>You sent successfully contact. We will respond as quickly as possible</value>
+  </data>
+  <data name="lblImage" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="lblNameTour" xml:space="preserve">
+    <value>Tour name</value>
+  </data>
+  <data name="lblNumberCustom" xml:space="preserve">
+    <value>Amount of people</value>
+  </data>
+  <data name="lblNumberTour" xml:space="preserve">
+    <value>Tour code</value>
+  </data>
+  <data name="lblSumPrice" xml:space="preserve">
+    <value>Sum Amount</value>
+  </data>
+  <data name="lblUnitPrice" xml:space="preserve">
+    <value>Unit price</value>
+  </data>
+  <data name="lblConfigOderTour" xml:space="preserve">
+    <value>Order Confirmation thaivietsmile website</value>
+  </data>
+  <data name="lblHederFormOder" xml:space="preserve">
+    <value>Booking information</value>
+  </data>
+  <data name="lblNameCustomOder" xml:space="preserve">
+    <value>Customer name</value>
+  </data>
+  <data name="lblSubOderTour" xml:space="preserve">
+    <value>New orders from the website thaivietsmile</value>
+  </data>
+  <data name="vbErrorOderTour" xml:space="preserve">
+    <value>Please enter the full information</value>
+  </data>
+  <data name="lblConfigFromEmailDisplayNameContact" xml:space="preserve">
+    <value>Confirmed contacts from website ThaiVietSmilTravel</value>
+  </data>
+  <data name="lblConfigFromEmailDisplayNameOder" xml:space="preserve">
+    <value>Booking confirmation from website ThaiVietSmilTravel</value>
+  </data>
+  <data name="lblFromEmailDisplayNameContact" xml:space="preserve">
+    <value>Contact customer</value>
+  </data>
+  <data name="lblFromEmailDisplayNameOder" xml:space="preserve">
+    <value>Booking from customers</value>
+  </data>
+</root>

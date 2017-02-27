@@ -1,0 +1,79 @@
+﻿@{
+    ViewBag.Title = "Order tour";
+}
+
+<hr />
+<div class="section group">
+    @using (Html.BeginForm("OrderTour", "Card", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new
+        {
+            @class = "text-danger"
+        })
+        <div class="form-group">
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-user"></i> @ThaiVietSmileTravel.Globalization.Resource.lblNameCustome </label>
+                    <input type="text" name="tenKH" class="form-control" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhNameCustome" />
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-road"></i> @ThaiVietSmileTravel.Globalization.Resource.lblAddress </label>
+                    <input type="text" name="diaChi" class="form-control" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhAddress" />
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-phone-alt"></i> @ThaiVietSmileTravel.Globalization.Resource.lblPhone</label>
+                    <input type="number" name="soDT" class="form-control" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhPhone" />
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-envelope"></i> @ThaiVietSmileTravel.Globalization.Resource.lblEmail</label>
+                    <input type="email" name="email" class="form-control" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEmail" />
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-time"></i> @ThaiVietSmileTravel.Globalization.Resource.lblDateOrder</label>
+                    <input class="form-control" id="datetimepickerOrder" name="datetimepickerOrder" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhDateOrder" type="date" />
+                    @*<input type='datetime' class="form-control" data-format="MM/dd/yyyy" name="dateOrder" id='datetimepickerOrder' placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhDateOrder" />*@
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div class='form-group col-md-12'>
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <label><i class="glyphicon glyphicon-list-alt"></i> @ThaiVietSmileTravel.Globalization.Resource.lblNote</label>
+                    <textarea class="form-control" name="ghiChu" style="height: 200px;" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhNote"></textarea>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class='col-md-12' style="padding: 15px;">
+                
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <input type="submit" class="btn btn-primary" value="@ThaiVietSmileTravel.Globalization.Resource.btnOrderTour" /><br />
+                    <span>@ThaiVietSmileTravel.Globalization.Resource.lblNoteOrderTour</span>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    }
+</div>
+
+

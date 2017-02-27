@@ -1,0 +1,73 @@
+﻿@model ThaiVietSmileTravel.Models.Framework.tbl_Tour
+
+@{
+    ViewBag.Title = "Chi tiết tour";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="padding-left: 15px;">
+    @if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+    {
+        <h3>@Model.TenTourVN</h3>
+    }
+    else
+    {
+        if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+        {
+            <h3>@Model.TenTourVN</h3>
+        }
+        else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+        {
+            <h3>@Model.TenTourEN</h3>
+        }
+        else
+        {
+            <h3>@Model.TenTourTL</h3>
+        }
+    }
+</div>
+
+
+<div class="col-sm-12 col-lg-12 col-md-12">
+    <div class="thumbnail">
+        <div class="caption">
+            <div class="col-sm-12 col-lg-12 col-md-12">
+                <div class="col-sm-5 col-lg-5 col-md-5">
+                    <img src="@Model.HinhAnh" style="height: 200px; margin-top: 10px;" />
+                </div>
+                <div class="col-sm-7 col-lg-7 col-md-7" style="height: 75%; float: left;">
+
+                    <h4>
+                        <label>@Model.SoNgay @ThaiVietSmileTravel.Globalization.Resource.lblDay @Model.SoDem @ThaiVietSmileTravel.Globalization.Resource.lblNight</label>
+                    </h4>
+                    <h4 class="text-item-number">$@Model.DonGia</h4>
+                    <button class="btn btn-primary margin-top-button-item">@ThaiVietSmileTravel.Globalization.Resource.btnAddShoping</button>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-12 col-md-12">
+                <h3>@ThaiVietSmileTravel.Globalization.Resource.lblTourDetail</h3>
+                @if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                {
+                    @Html.Raw(@Model.NoiDungVN)
+                }
+                else
+                {
+                    if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                    {
+                        @Html.Raw(@Model.NoiDungVN)
+                    }
+                    else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                    {
+                        @Html.Raw(@Model.NoiDungEN)
+                    }
+                    else
+                    {
+                        @Html.Raw(@Model.NoiDungTL)
+                    }
+                }
+               
+            </div>
+        </div>
+    </div>
+</div>
+

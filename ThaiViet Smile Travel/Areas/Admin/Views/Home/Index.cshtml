@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" title="" class="well top-block" href="@Url.Action("Tour", "Home")">
+            <i class="glyphicon glyphicon-list-alt blue"></i>
+            <h2>Danh sách tour</h2>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" title="" class="well top-block" href="@Url.Action("CreateTour", "Home")">
+            <i class="glyphicon glyphicon-plus-sign green"></i>
+            <h2>Thêm tour</h2>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" title="" class="well top-block" href="@Url.Action("EditAbout", "Home", new {id = 1})">
+            <i class="glyphicon glyphicon-shopping-cart yellow"></i>
+            <h2>Giỏ hàng</h2>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" class="well top-block" href="#">
+            <i class="glyphicon glyphicon-envelope red"></i>
+            <h2>Danh sách liên hệ</h2>
+        </a>
+    </div>
+</div>

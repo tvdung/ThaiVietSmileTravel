@@ -1,0 +1,171 @@
+﻿@model ThaiVietSmileTravel.Models.Framework.tbl_Contact
+@{
+    ViewBag.Title = ThaiVietSmileTravel.Globalization.Resource.TitleContact;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row" style="margin-top:20px;">
+        <div class="col-md-5">
+            <div id="map_canvas"></div>
+        </div>
+        <div class="col-md-4">
+            @Html.Raw(@ThaiVietSmileTravel.Globalization.Resource.lblHeadContact)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <h3>@ThaiVietSmileTravel.Globalization.Resource.h3Contact</h3>
+            <p class="lead">@ThaiVietSmileTravel.Globalization.Resource.lblContactQuestion</p>
+
+            <p>@ThaiVietSmileTravel.Globalization.Resource.lblTitleInputFormContact</p> <br>
+
+            <!-- BEGIN DOWNLOAD PANEL -->
+            @using (Html.BeginForm("ContactResult", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="panel panel-default well">
+                    <div class="panel-body">
+                        <form action="" class="form-horizontal track-event-form bv-form" data-goaltype="”General”" data-formname="”ContactUs”" method="post" id="contact-us-all" novalidate="novalidate">
+                            <input name="elqSiteId" type="hidden" value="928">
+                            <input name="sFDCLastCampaignID" type="hidden" value="701400000012Lql">
+                            <input name="elqFormName" type="hidden" value="EMEAAllContactUsSubmissions">
+                            <input name="nexturl" type="hidden" value="">
+                            <input name="Partner" type="hidden" value="">
+                            <input name="language" type="hidden" value="en">
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.Ho, new { htmlAttributes = new { @class = "form-control", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhEnterFirtName} })
+                                        @Html.ValidationMessageFor(model => model.Ho, "", new { @class = "text-danger" })
+                                        @*<input type="text" class="form-control" id="firstName" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEnterFirtName" name="firstName" data-bv-field="C_FirstName">*@
+                                    </div>
+                                    <small data-bv-validator="notEmpty" data-bv-validator-for="C_FirstName" class="help-block" style="display: none;">Required</small>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.Ten, new { htmlAttributes = new { @class = "form-control", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhEnterLastName} })
+                                        @Html.ValidationMessageFor(model => model.Ten, "", new { @class = "text-danger" })
+                                        @*<input type="text" class="form-control" id="lastName" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEnterLastName" name="lastName" data-bv-field="C_LastName">*@
+                                    </div>
+                                    <small data-bv-validator="notEmpty" data-bv-validator-for="C_LastName" class="help-block" style="display: none;">Required</small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", type = "email", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhEnterEmail } })
+                                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                        @*<input type="email" class="form-control" id="email" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEnterEmail" name="email" data-bv-field="C_EmailAddress">*@
+                                    </div>
+                                    <small data-bv-validator="notEmpty" data-bv-validator-for="C_EmailAddress" class="help-block" style="display: none;">Required</small>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-briefcase"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.TenCongTy, new { htmlAttributes = new { @class = "form-control", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhEnterCompany } })
+                                        @Html.ValidationMessageFor(model => model.TenCongTy, "", new { @class = "text-danger" })
+                                        @*<input type="text" class="form-control" id="company" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEnterCompany" name="company">*@
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.SoDT, new { htmlAttributes = new { @class = "form-control", type = "number", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhPhone } })
+                                        @Html.ValidationMessageFor(model => model.SoDT, "", new { @class = "text-danger" })
+                                        @*<input type="number" class="form-control" id="phoneNumber" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhPhone" name="phoneNumber" data-bv-field="C_EmailAddress">*@
+                                    </div>
+                                    <small data-bv-validator="notEmpty" data-bv-validator-for="C_EmailAddress" class="help-block" style="display: none;">Required</small>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-briefcase"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.DiaChi, new { htmlAttributes = new { @class = "form-control", placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhAddress } })
+                                        @Html.ValidationMessageFor(model => model.DiaChi, "", new { @class = "text-danger" })
+                                        @*<input type="text" class="form-control" id="adress" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhAddress" name="adress">*@
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <div class="input-group input-group-contact">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-comment fa-2"></i>
+                                        </div>
+                                        @Html.TextAreaFor(model => model.GhiChu, new { @class = "form-control", @rows = "5", @placeholder = @ThaiVietSmileTravel.Globalization.Resource.plhEnterMesseage })
+                                        @Html.ValidationMessageFor(model => model.GhiChu, "", new { @class = "text-danger" })
+                                        @*<textarea class="form-control" name="comments" id="comments" rows="5" style="width: 99.9%" placeholder="@ThaiVietSmileTravel.Globalization.Resource.plhEnterMesseage"></textarea>*@
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button id="contacts-submit" type="submit" class="btn btn-default btn-info">@ThaiVietSmileTravel.Globalization.Resource.btnSend</button>
+                                </div>
+                            </div>
+                            <input type="hidden" value="">
+                        </form>
+                    </div><!-- end panel-body -->
+                </div>
+    <!-- end panel -->
+    <!-- END DOWNLOAD PANEL -->
+            }
+        </div><!-- end col-md-8 -->
+        <div class="col-md-2"> </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDe5ItfAmK4Ma3gQNuoc1TOKjjm5w2ljhI"></script>
+    <script>
+
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(20.984243, 105.808372);
+            var mapOptions = {
+                zoom: 9,
+                center: myLatlng
+            };
+
+            var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+            var contentString = "<table><tr><th>THAIVIET SMILE TRAVEL CO., LTD</th></tr><tr><td>Add: 268 Nguyen Xien Str., Thanh Xuan Dist., Hanoi, Vietnam.</td></tr><tr><td>Office branch: 12 Bui Chat Str., Lien Chieu Dist., Danang, Vietnam.</td></tr></table>";
+
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: 'THAIVIET SMILE TRAVEL CO., LTD'
+            });
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+}

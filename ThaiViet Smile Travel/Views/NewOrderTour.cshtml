@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Thông tin đơn hàng từ khách hàng: {{TenKH}}</title>
+    <meta charset="utf-8" />
+
+        <style type="text/css">
+        .tourInfo {
+            width: 500px;
+            border-collapse: collapse;
+        }
+ 
+            .tourInfo td {
+                border: 1px solid black;
+            }
+ 
+                .tourInfo td:nth-child(even) {
+                    background-color: #E4FFB7;
+                }
+ 
+                .tourInfo td:nth-child(odd) {
+                    background-color: #EFFFD2;
+                }
+ 
+            .tourInfo tr:first-child td {
+                text-align: center;
+                font-weight: bolder;
+                background-color: #80B327;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <table class="tourInfo">
+        <tbody>
+            <tr>
+                <td colspan="6">Thông tin đặt tour@*@ThaiVietSmileTravel.Globalization.Resource.lblHederFormOder*@</td>
+            </tr>
+            <tr class="mainRow">
+                <td>Tên khách hàng@*@ThaiVietSmileTravel.Globalization.Resource.lblNameCustomOder*@</td>
+                <td>{{TenKH}}</td>
+            </tr>
+            <tr class="altRow">
+                <td>Số điện thoại@*@ThaiVietSmileTravel.Globalization.Resource.lblPhone*@</td>
+                <td>{{SoDT}}</td>
+            </tr>
+            <tr>
+                <td>Email@*@ThaiVietSmileTravel.Globalization.Resource.lblEmail*@</td>
+                <td>{{Email}}</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ@*@ThaiVietSmileTravel.Globalization.Resource.lblAddress*@</td>
+                <td>{{DiaChi}}</td>
+            </tr>
+            <tr>
+                <td>Tên tour@*@ThaiVietSmileTravel.Globalization.Resource.lblNameTour*@</td>
+                <td>{{TenTour}}</td>
+            </tr>
+            <tr>
+                <td>Số người@*@ThaiVietSmileTravel.Globalization.Resource.lblNumberCustom*@</td>
+                <td>{{SoNguoi}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    @*<label class="label-success">We will contact you within the shortest time</label><br/>
+    <label class="label-success">Contact us at Mr.Long Thailand Tel 0876366396 - 00 984 916 745 457 Vietnam.</label><br />
+    <label class="label-success">E-mail : thaivietsmiletravel@gmail.com</label><br />
+    <label class="label-success">Skype : thaivietsmiletravel</label><br />
+    <label class="label-success">ID Line : thaivietsmiletravel</label><br />*@
+</body>
+</html>
