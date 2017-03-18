@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Liên hệ từ : {{TenKH}}</title>
+    <meta charset="utf-8" />
+        <style type="text/css">
+        .tourInfo {
+            width: 500px;
+            border-collapse: collapse;
+        }
+ 
+            .tourInfo td {
+                border: 1px solid black;
+            }
+ 
+                .tourInfo td:nth-child(even) {
+                    background-color: #E4FFB7;
+                }
+ 
+                .tourInfo td:nth-child(odd) {
+                    background-color: #EFFFD2;
+                }
+ 
+            .tourInfo tr:first-child td {
+                text-align: center;
+                font-weight: bolder;
+                background-color: #80B327;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <table class="tourInfo">
+        <tbody>
+            <tr>
+                <td colspan="6">Thông tin liên hệ</td>
+            </tr>
+            <tr class="mainRow">
+                <td>Tên khách hàng</td>
+                <td>{{TenKH}}</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>{{Email}}</td>
+            </tr>
+            <tr class="altRow">
+                <td>Điện thoại</td>
+                <td>{{SoDT}}</td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td>{{DiaChi}}</td>
+            </tr>
+            <tr>
+                <td>Tên công ty</td>
+                <td>{{TenCompany}}</td>
+            </tr>
+            <tr>
+                <td>Ghi chú</td>
+                <td>{{Comment}}</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

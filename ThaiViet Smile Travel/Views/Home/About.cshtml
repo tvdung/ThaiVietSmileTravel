@@ -9,23 +9,23 @@
         <div class="col-md-8">
             @foreach (var item in Model)
             {
-                if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture == null)
                 {
-                    if (item.NoiDungVN != null)
+                    if (item.NoiDungTL != null)
                     {
-                        @Html.Raw(item.NoiDungVN)
+                        @Html.Raw(item.NoiDungTL)
                     }
                 }
                 else
                 {
-                    if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                    if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("vi"))
                     {
                         if (item.NoiDungVN != null)
                         {
                             @Html.Raw(item.NoiDungVN)
                         }
                     }
-                    else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                    else if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("en"))
                     {
                         if (item.NoiDungEN != null)
                         {

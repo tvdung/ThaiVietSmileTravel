@@ -152,7 +152,7 @@ namespace ThaiViet_Smile_Travel.Controllers
         public ActionResult OrderTour(string tenKH, string diaChi, string soDT, string email, DateTime? datetimepickerOrder, string ghiChu)
         {
             var cart = (List<CardItemModel>)Session[CommonConstants.CardSession];
-            var admin = new TVSTravelDbContext().tbl_Administrator.Where(x => x.IsAdmin);
+            var admin = db.tbl_Account.FirstOrDefault();
             if (!string.IsNullOrEmpty(tenKH) && !string.IsNullOrEmpty(diaChi) && !string.IsNullOrEmpty(soDT))
             {
                 var order = new tbl_Orders();
@@ -182,7 +182,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                         InsertOrderDetail(orderDetail);
                     }
 
-                    string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/NewOrderTour.cshtml"));
+                    string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/OrderMail/NewOrderTourSendAdmin.cshtml"));
                     content = content.Replace("{{TenKH}}", tenKH);
                     content = content.Replace("{{SoDT}}", soDT);
                     content = content.Replace("{{Email}}", email);
@@ -190,12 +190,11 @@ namespace ThaiViet_Smile_Travel.Controllers
                     content = content.Replace("{{TenTour}}", tentour);
                     content = content.Replace("{{SoNguoi}}", songuoi.ToString("N0"));
 
-                    var tblAdministrator = admin.FirstOrDefault();
-                    if (tblAdministrator != null)
+                    if (admin.Email != null)
                     {
-                        var toEmail = tblAdministrator.Email;
+                        var toEmail = admin.Email;
                         //new MailHelper().SendMail(email, @ThaiVietSmileTravel.Globalization.Resource.lblConfigOderTour, tenKH, content, 0, 1);
-                        new MailHelper().SendMail(toEmail, @ThaiVietSmileTravel.Globalization.Resource.lblSubOderTour, tenKH, content, 0, 0);
+                        new MailHelper().SendMail(toEmail, @ThaiVietSmileTravel.Globalization.Resource.lblSubOderTour, tenKH, content, false, false);
                     }
                 }
                 catch (Exception ex)

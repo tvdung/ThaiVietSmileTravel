@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ThaiVietSmileTravel.Models.Framework
 {
-   public partial class tbl_Banner
+    public partial class tbl_Banner
     {
         public int Id { get; set; }
 
-        [StringLength(50)]
+        [StringLength(4000)]
+        [Display(Name = "Hình ảnh")]
         public string HinhAnh { get; set; }
 
-        [Column(TypeName = "ntext")]
+        [StringLength(255)]
+        [Display(Name = "Link tới tour")]
         public string UrlTour { get; set; }
 
+        [Display(Name = "Trạng thái hiển thị")]
         public bool IsActive { get; set; }
-
-        
     }
 }

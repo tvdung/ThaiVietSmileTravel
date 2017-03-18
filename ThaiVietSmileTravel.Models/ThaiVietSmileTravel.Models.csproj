@@ -80,7 +80,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Framework\tbl_About.cs" />
-    <Compile Include="Framework\tbl_Administrator.cs" />
+    <Compile Include="Framework\tbl_Account.cs" />
     <Compile Include="Framework\tbl_Banner.cs" />
     <Compile Include="Framework\tbl_Categories.cs" />
     <Compile Include="Framework\tbl_Contact.cs" />

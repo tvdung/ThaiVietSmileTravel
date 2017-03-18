@@ -34,5 +34,9 @@
 
         [StringLength(50)]
         public string GhiChu { get; set; }
+
+        public bool IsReply { get; set; }
+
+        public DateTime NgayGui { get; set; }
     }
 }

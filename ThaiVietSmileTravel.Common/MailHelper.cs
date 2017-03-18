@@ -10,9 +10,9 @@ namespace ThaiVietSmileTravel.Common
 {
     public class MailHelper
     {
-        public void SendMail(string toEmailAddress, string subject, string name, string content, int contact, int custom)
+        public void SendMail(string toEmailAddress, string subject, string name, string content, bool contact, bool custom)
         {
-            var admin = new TVSTravelDbContext().tbl_Administrator.Where(x => x.IsAdmin);
+            var admin = new TVSTravelDbContext().tbl_Account.Where(x => x.IsAdmin);
             string fromEmailDisplayName;
             var tblAdministrator = admin.FirstOrDefault();
             if (tblAdministrator != null)
@@ -20,21 +20,21 @@ namespace ThaiVietSmileTravel.Common
                 var fromEmailAddress = tblAdministrator.Email; // ConfigurationManager.AppSettings["FromEmailAddress"].ToString();
 
                 //var toEmailAddress = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
-                var fromEmailPassword = tblAdministrator.PasswordEmail; //ConfigurationManager.AppSettings["FromEmailPassword"].ToString();
-                if (contact == 1)
+                var fromEmailPassword = CommonHelper.Decrypt(tblAdministrator.PasswordEmail, true); //ConfigurationManager.AppSettings["FromEmailPassword"].ToString();
+                if (contact)
                 {
-                    if (custom == 0)
+                    if (custom == false)
                     {
-                        fromEmailDisplayName = Globalization.Resource.lblFromEmailDisplayNameContact + " " + name;
+                        fromEmailDisplayName = subject + " " + name;
                     }
                     else
                     {
-                        fromEmailDisplayName = Globalization.Resource.lblConfigFromEmailDisplayNameContact;
+                        fromEmailDisplayName = subject;
                     }
                 }
                 else
                 {
-                    if (custom == 0)
+                    if (custom == false)
                     {
                         fromEmailDisplayName = Globalization.Resource.lblFromEmailDisplayNameOder + " " + name;
                     }

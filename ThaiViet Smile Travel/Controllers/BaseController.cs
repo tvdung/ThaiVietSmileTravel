@@ -15,15 +15,15 @@ namespace ThaiViet_Smile_Travel.Controllers
         protected override void Initialize(RequestContext requestContext)
         {
             base.Initialize(requestContext);
-            if(Session[Common.CommonConstants.CurrentCulture] != null)
+            if(Common.CommonConstants.CurrentCulture != null)
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(Session[Common.CommonConstants.CurrentCulture].ToString());
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Session[Common.CommonConstants.CurrentCulture].ToString());
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(Common.CommonConstants.CurrentCulture.ToString());
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Common.CommonConstants.CurrentCulture.ToString());
             }
             else
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("vi");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("th");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("th");
             }
             double khach = 0;
             TextReader tr = new StreamReader(Server.MapPath("~/luottruycap.txt"));
@@ -51,7 +51,7 @@ namespace ThaiViet_Smile_Travel.Controllers
             Thread.CurrentThread.CurrentCulture = new CultureInfo(valueCulture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(valueCulture);
 
-            Session[Common.CommonConstants.CurrentCulture] = valueCulture;
+            Common.CommonConstants.CurrentCulture = valueCulture;
             return Redirect(returnUrl);
         }
     }

@@ -45,11 +45,11 @@
                 <td class="center">
                     @if (item.IsActive)
                     {
-                        <span class="label-success label label-default">Kích hoạt</span>
+                        <span class="label-success label label-default">Hiển thị</span>
                     }
                     else
                     {
-                        <span class="label-default label label-danger">Chưa kích hoạt</span>
+                        <span class="label-default label label-danger">Ẩn</span>
                     }
                 </td>
                 <td class="center">
@@ -61,10 +61,17 @@
                         <i class="glyphicon glyphicon-edit icon-white"></i>
                         Sửa
                     </a>
-                        <a class="btn btn-danger" href="@Url.Action("DeleteConfirmed", "Home", new {id = @item.Id })">
-                            <i class="glyphicon glyphicon-trash icon-white"></i>
-                            Xóa
-                        </a>
+                    @*<a class="btn btn-danger" href="@Url.Action("DeleteConfirmed", "Home", new
+                                                    {
+                                                        id = @item.Id
+                                                    })">
+                        <i class="glyphicon glyphicon-trash icon-white"></i>
+                        Xóa
+                    </a>*@
+                    <a class="btn btn-primary" href="@Url.Action("DeleteConfirmed","Home", new {id = item.Id })">
+                        <i class="glyphicon glyphicon-check icon-white"></i>
+                        Cập nhật trạng thái
+                    </a>
 </td>
             </tr>
 }

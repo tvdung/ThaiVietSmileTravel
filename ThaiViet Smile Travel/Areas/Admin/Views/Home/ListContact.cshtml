@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ThaiVietSmileTravel.Models.Framework.tbl_Contact>
+@{
+    ViewBag.Title = "Danh sách liên hệ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Danh sách liên hệ</h2>
+
+<div class="box-content">
+    <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
+        <thead>
+            <tr>
+                <th>Họ tên</th>
+                <th>@Html.DisplayNameFor(model => model.DiaChi)</th>
+                <th>@Html.DisplayNameFor(model => model.SoDT)</th>
+                <th>@Html.DisplayNameFor(model => model.Email)</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ho)  @Html.DisplayFor(modelItem => item.Ten) 
+                    </td>
+                    <td class="center">
+                        @Html.DisplayFor(modelItem => item.SoDT)
+                    </td>
+                    <td class="center">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td class="center">
+                        @Html.DisplayFor(modelItem => item.DiaChi)
+                    <td class="center">
+                        @if (item.IsReply)
+                        {
+                            <span class="label-success label label-default">Đã liên hệ</span>
+                        }
+                        else
+                        {
+                            <span class="label-default label label-danger">Chưa liên hệ</span>
+                        }
+                    </td>
+                    <td class="center">
+                        <a class="btn btn-primary" href="@Url.Action("UpdateStatusContact","Home", new {id = item.Id })">
+                            <i class="glyphicon glyphicon-check icon-white"></i>
+                            Cập nhật trạng thái
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
