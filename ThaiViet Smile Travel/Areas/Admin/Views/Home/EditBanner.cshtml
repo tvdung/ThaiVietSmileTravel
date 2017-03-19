@@ -1,0 +1,67 @@
+﻿@model ThaiVietSmileTravel.Models.Framework.tbl_Banner
+
+@{
+    ViewBag.Title = "EditBanner";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-plus-sign"></i>Cập nhật banner</h2>
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-setting btn-round btn-default">
+                            <i class="glyphicon glyphicon-cog"></i>
+                        </a>
+                        <a href="#" class="btn btn-minimize btn-round btn-default">
+                            <i class="glyphicon glyphicon-chevron-up"></i>
+                        </a>
+                        <a href="#" class="btn btn-close btn-round btn-default">
+                            <i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="box-content">
+                    <form role="form">
+                        <div class="row form-group">
+                            @Html.LabelFor(model => model.HinhAnh, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.HinhAnh, new { htmlAttributes = new { @class = "form-control textbox-control" } })
+                                @Html.ValidationMessageFor(model => model.HinhAnh, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="col-md-2">
+                                <input type="button" id="Browse" value="Chọn hình" class="btn btn-default" />
+                            </div>
+                            <script>
+                                $("#Browse").click(function () {
+                                    var finder = new CKFinder();
+                                    finder.selectActionFunction = function (fileUrl) {
+                                        //Lấy file cuối cùng
+                                        //fileUrl = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
+                                        $('#HinhAnh').val(fileUrl);
+                                    };
+                                    finder.popup();
+                                })
+                            </script>
+                        </div>
+                        <div class="row form-group">
+                            @Html.LabelFor(model => model.UrlTour, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-4">
+                                @Html.EditorFor(model => model.UrlTour, new { htmlAttributes = new { @class = "form-control textbox-control" } })
+                                @Html.ValidationMessageFor(model => model.UrlTour, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                       
+                        <button type="submit" class="btn btn-primary" style="margin-bottom: 40px; margin-top: 40px;">Cập nhật</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+}

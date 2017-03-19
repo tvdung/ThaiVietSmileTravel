@@ -61,7 +61,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đặt tour.
+        ///   Looks up a localized string similar to เพิ่มสินค้า.
         /// </summary>
         public static string btnAddShoping {
             get {
@@ -70,7 +70,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiếp tục mua hàng.
+        ///   Looks up a localized string similar to ซื้อสินค้าต่อ.
         /// </summary>
         public static string btnContinue {
             get {
@@ -79,7 +79,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xem chi tiết.
+        ///   Looks up a localized string similar to รายละเอียด.
         /// </summary>
         public static string btnDetail {
             get {
@@ -88,7 +88,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đặt tour.
+        ///   Looks up a localized string similar to จองทัวร์.
         /// </summary>
         public static string btnOrderTour {
             get {
@@ -97,7 +97,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gửi.
+        ///   Looks up a localized string similar to ส่ง.
         /// </summary>
         public static string btnSend {
             get {
@@ -106,7 +106,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cập nhật số người.
+        ///   Looks up a localized string similar to จำนวนคน.
         /// </summary>
         public static string btnUpdate {
             get {
@@ -115,7 +115,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiếng anh.
+        ///   Looks up a localized string similar to ภาษาอังกฤษ.
         /// </summary>
         public static string English {
             get {
@@ -124,7 +124,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Liên hệ với chúng tôi.
+        ///   Looks up a localized string similar to ติดต่อเรา.
         /// </summary>
         public static string h3Contact {
             get {
@@ -133,7 +133,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Địa chỉ.
+        ///   Looks up a localized string similar to ที่อยู่.
         /// </summary>
         public static string lblAddress {
             get {
@@ -142,7 +142,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xác nhận liên hệ từ website ThaiVietSmilTravel.
+        ///   Looks up a localized string similar to ยืนยันที่อยู่ติดต่อจากเว็บไซต์ thaivietsmile.
         /// </summary>
         public static string lblConfigFromEmailDisplayNameContact {
             get {
@@ -151,7 +151,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xác nhận đặt tour từ website ThaiVietSmilTravel.
+        ///   Looks up a localized string similar to การยืนยันการจองจากเว็บไซต์ thaivietsmile.
         /// </summary>
         public static string lblConfigFromEmailDisplayNameOder {
             get {
@@ -160,7 +160,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Xác nhận đơn hàng website thaivietsmile.
+        ///   Looks up a localized string similar to ยืนยันการสั่งซื้อ thaivietsmile เว็บไซต์.
         /// </summary>
         public static string lblConfigOderTour {
             get {
@@ -169,7 +169,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bạn có câu hỏi hoặc muốn biết thêm thông tin?.
+        ///   Looks up a localized string similar to คุณอยากได้ข้อมูลเพิ่มเติม.
         /// </summary>
         public static string lblContactQuestion {
             get {
@@ -180,11 +180,11 @@ namespace ThaiVietSmileTravel.Globalization {
         /// <summary>
         ///   Looks up a localized string similar to &lt;h4 style=&quot;color:green&quot;&gt;THAIVIET SMILE TRAVEL CO., LTD.&lt;/h4&gt;
         ///                &lt;ul&gt;
-        ///					&lt;Li&gt; Hãy Tour Việt Nam. Tất cả các chuyên gia Việt Nam &lt;/ li&gt;.
-        ///					&lt;Li&gt; Hãy Tour. Việt Nam - Việt Nam - Trung Việt Nam &lt;/ li&gt;.
-        ///					&lt;Li&gt; Task Group đạt Services Group (công ty là hài lòng để liên lạc cơ quan chức năng tại Việt Nam để được. Nếu không có chi phí) &lt;/ li&gt;.
-        ///					&lt;Li&gt; Một hướng dẫn viên nói tiếng Anh và Thái Lan chăm sóc khách hàng hài hòa &lt;/ li&gt;.
-        ///                    &lt;li&gt;Liên lạc với chúng tôi tại Mr.Lon [rest of string was truncated]&quot;;.
+        ///					&lt;li&gt; รับทำแลนด์ทัวร์เวียดนาม เชียวชาญทุกเส้นทางในเวียดนาม&lt;/li&gt;
+        ///					&lt;li&gt;รับทำแลนด์ทัวร์ เวียดนามเหนือ - เวียดนามกลาง - เวียดนามใต้ &lt;/li&gt;
+        ///					&lt;li&gt;บริการจัดกรุ๊ปดูงาน กรุ๊ปสัมมา (ทางบริษัทยินดีติดต่อประสานงานหน่วยงานในประเทศเวียดนามให้ได้ โดยไม่เสียค่าใช้จ่าย)&lt;/li&gt;
+        ///					&lt;li&gt;มีไกด์นำเที่ยว พูดภาษาไทย อังกฤษ มารญาติดี ดูแลเอาใจใส่ลูกค้า&lt;/li&gt;
+        ///                    &lt;li&gt;ติดต่อสอบถามได้ที่ Mr.Long เบอร์โทรไทย 0876366396 - เว [rest of string was truncated]&quot;;.
         /// </summary>
         public static string lblContentAbout {
             get {
@@ -193,7 +193,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lượt truy cập.
+        ///   Looks up a localized string similar to เข้าชมเว็บไซต์.
         /// </summary>
         public static string lblCountVisistor {
             get {
@@ -202,7 +202,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ngày cần đặt.
+        ///   Looks up a localized string similar to วันที่จอง.
         /// </summary>
         public static string lblDateOrder {
             get {
@@ -211,7 +211,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ngày.
+        ///   Looks up a localized string similar to วัันที่.
         /// </summary>
         public static string lblDay {
             get {
@@ -220,7 +220,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email.
+        ///   Looks up a localized string similar to อีเมล์.
         /// </summary>
         public static string lblEmail {
             get {
@@ -229,7 +229,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Liên hệ từ khách hàng.
+        ///   Looks up a localized string similar to การติดต่อกับลูกค้า.
         /// </summary>
         public static string lblFromEmailDisplayNameContact {
             get {
@@ -238,7 +238,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đặt tour từ khách hàng.
+        ///   Looks up a localized string similar to ยืนยันการติดต่อจากเว็บไซต์ thaivietsmile.
         /// </summary>
         public static string lblFromEmailDisplayNameOder {
             get {
@@ -249,12 +249,12 @@ namespace ThaiVietSmileTravel.Globalization {
         /// <summary>
         ///   Looks up a localized string similar to &lt;h4 style=&quot;color:green&quot;&gt;THAIVIET SMILE TRAVEL CO., LTD.&lt;/h4&gt;
         ///                &lt;ul&gt;
-        ///                    &lt;li&gt;Liên lạc với chúng tôi tại Mr.Long Thái Lan Tel 0876366396 - 00 984 916 745 457 Việt Nam.&lt;/li&gt;
+        ///                    &lt;li&gt;ติดต่อสอบถามได้ที่ Mr.Long เบอร์โทรไทย 0876366396 - เวียดนาม 00984 916745457&lt;/li&gt;
         ///                    &lt;li&gt;E-mail : thaivietsmiletravel@gmail.com&lt;/li&gt;
         ///                    &lt;li&gt;Skype : thaivietsmiletravel&lt;/li&gt;
         ///                    &lt;li&gt;ID Line : thaivietsmiletravel &lt;/li&gt;
-        ///                    &lt;li style=&quot;color:green&quot;&gt;Văn phòng tại Hà Nội&lt;/li&gt;
-        ///                    &lt;li&gt;268 Nguyễn Xiển, Thanh Xu [rest of string was truncated]&quot;;.
+        ///                    &lt;li style=&quot;color:green&quot;&gt;สำนักงานที่ ฮานอย&lt;/li&gt;
+        ///                    &lt;li&gt;268 Nguyen Xien Str., Thanh Xuan Dist., H [rest of string was truncated]&quot;;.
         /// </summary>
         public static string lblHeadContact {
             get {
@@ -263,7 +263,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thông tin đặt tour.
+        ///   Looks up a localized string similar to ข้อมูลการท่องเที่ยว.
         /// </summary>
         public static string lblHederFormOder {
             get {
@@ -272,7 +272,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hình Ảnh.
+        ///   Looks up a localized string similar to ภาพ.
         /// </summary>
         public static string lblImage {
             get {
@@ -281,7 +281,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tên khách hàng.
+        ///   Looks up a localized string similar to ชื่อลูกค้า.
         /// </summary>
         public static string lblNameCustome {
             get {
@@ -290,7 +290,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tên khách hàng.
+        ///   Looks up a localized string similar to ชื่อลูกค้า.
         /// </summary>
         public static string lblNameCustomOder {
             get {
@@ -299,7 +299,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tên tour.
+        ///   Looks up a localized string similar to ชื่อของการท่องเที่ยว.
         /// </summary>
         public static string lblNameTour {
             get {
@@ -308,7 +308,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đêm.
+        ///   Looks up a localized string similar to คุืน.
         /// </summary>
         public static string lblNight {
             get {
@@ -317,7 +317,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chưa có tour nào trong giỏ hàng. Bạn vui lòng chọn tour.
+        ///   Looks up a localized string similar to ยังไม่ทัวร์ที่ได้จอง - กรุณาเลือกทัวร์.
         /// </summary>
         public static string lblNoSelectTour {
             get {
@@ -326,7 +326,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ghi chú.
+        ///   Looks up a localized string similar to หมายเหตุ.
         /// </summary>
         public static string lblNote {
             get {
@@ -335,7 +335,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Lưu ý: các bạn đặt tour không cần phải thanh toán online. Bên mình sẽ liên hệ với bạn sau khi thỏa thuận xong thì mới tiến hành thanh toán trực tiếp.
+        ///   Looks up a localized string similar to หมายเหตุ เมื่อได้จองทัวร์ คุณไม่ต้องจ่ายออนไลน์ มีพนักงานพวกเราจะติดต่อกลับ.
         /// </summary>
         public static string lblNoteOrderTour {
             get {
@@ -344,7 +344,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số người.
+        ///   Looks up a localized string similar to จำนวน.
         /// </summary>
         public static string lblNumberCustom {
             get {
@@ -353,7 +353,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mã tour.
+        ///   Looks up a localized string similar to รหัสทัวร์.
         /// </summary>
         public static string lblNumberTour {
             get {
@@ -362,7 +362,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số điện thoại.
+        ///   Looks up a localized string similar to เบอร์โทร.
         /// </summary>
         public static string lblPhone {
             get {
@@ -371,7 +371,16 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đơn hàng mới từ website thaivietsmile.
+        ///   Looks up a localized string similar to ค้นหา.
+        /// </summary>
+        public static string lblSearch {
+            get {
+                return ResourceManager.GetString("lblSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to คำสั่งซื้อใหม่จาก thaivietsmile เว็บไซต์.
         /// </summary>
         public static string lblSubOderTour {
             get {
@@ -380,7 +389,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thành tiền.
+        ///   Looks up a localized string similar to จำนวน.
         /// </summary>
         public static string lblSumPrice {
             get {
@@ -389,7 +398,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hãy điền vào form dưới đây và gửi về chúng tôi, chúng tôi sẽ phản hồi sớm nhất có thể.
+        ///   Looks up a localized string similar to กรุณากรอกข้อมูลเข้าในฟอร์มข้างล่าง พวกเราจะติดต่อกลับนะคะ.
         /// </summary>
         public static string lblTitleInputFormContact {
             get {
@@ -398,7 +407,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to tour.
+        ///   Looks up a localized string similar to ที่ัวร์.
         /// </summary>
         public static string lblTour {
             get {
@@ -407,7 +416,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Thông tin chi tiết.
+        ///   Looks up a localized string similar to ข้อมูลรายละเอียด.
         /// </summary>
         public static string lblTourDetail {
             get {
@@ -416,7 +425,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đơn giá.
+        ///   Looks up a localized string similar to ราคาต่อหน่วย.
         /// </summary>
         public static string lblUnitPrice {
             get {
@@ -425,7 +434,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bạn đã đặt tour thành công. Chúng tôi sẽ liên hệ ngay với bạn..
+        ///   Looks up a localized string similar to คุณได้กำหนดให้ประสบความสำเร็จในการท่องเที่ยว เราจะติดต่อคุณ.
         /// </summary>
         public static string oderTourSuccess {
             get {
@@ -434,7 +443,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Đặt tour không thành công. Xin vui lòng đặt lại..
+        ///   Looks up a localized string similar to ไม่ประสบความสำเร็จในการจอง โปรดรีเซ็ต.
         /// </summary>
         public static string orderTourError {
             get {
@@ -443,7 +452,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập địa chỉ.
+        ///   Looks up a localized string similar to กรุณากรอกที่อยู่.
         /// </summary>
         public static string plhAddress {
             get {
@@ -452,7 +461,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to MM/dd/yyyy.
+        ///   Looks up a localized string similar to ดด/วว/ปปปป.
         /// </summary>
         public static string plhDateOrder {
             get {
@@ -461,7 +470,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập Email.
+        ///   Looks up a localized string similar to กรุณากรอกอีเมล์.
         /// </summary>
         public static string plhEmail {
             get {
@@ -470,7 +479,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập địa chỉ.
+        ///   Looks up a localized string similar to กรุณากรอกที่อยู่.
         /// </summary>
         public static string plhEnterAdress {
             get {
@@ -479,7 +488,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập tên công ty.
+        ///   Looks up a localized string similar to กรุณากรอก บริษัท.
         /// </summary>
         public static string plhEnterCompany {
             get {
@@ -488,7 +497,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập email.
+        ///   Looks up a localized string similar to กรุณากรอกอีเมล.
         /// </summary>
         public static string plhEnterEmail {
             get {
@@ -497,7 +506,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập họ.
+        ///   Looks up a localized string similar to กรุณากรอกชื่อแรก.
         /// </summary>
         public static string plhEnterFirtName {
             get {
@@ -506,7 +515,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập tên.
+        ///   Looks up a localized string similar to กรุณาใส่นามสกุล.
         /// </summary>
         public static string plhEnterLastName {
             get {
@@ -515,7 +524,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập ghi chú.
+        ///   Looks up a localized string similar to กรุณาใส่ข้อความของคุณที่นี่.
         /// </summary>
         public static string plhEnterMesseage {
             get {
@@ -524,7 +533,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập số điện thoại liên hệ.
+        ///   Looks up a localized string similar to กรุณาใส่โทรศัพท์.
         /// </summary>
         public static string plhEnterPhone {
             get {
@@ -533,7 +542,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập đầy đủ họ và tên.
+        ///   Looks up a localized string similar to กรุณากรอกครบ ชื่อ นามสกุล.
         /// </summary>
         public static string plhNameCustome {
             get {
@@ -542,7 +551,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng ghi chú nếu có.
+        ///   Looks up a localized string similar to เขียนหมายเหตุ ถ้ามี.
         /// </summary>
         public static string plhNote {
             get {
@@ -551,7 +560,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Vui lòng nhập số điện thoại.
+        ///   Looks up a localized string similar to กรุณากรอกเบอร์โทร.
         /// </summary>
         public static string plhPhone {
             get {
@@ -560,7 +569,16 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Gửi liên hệ không thành công. Vui lòng gửi lại.
+        ///   Looks up a localized string similar to การเดินทางครั้งนี้ไม่ได้อยู่ กรุณาค้นหาสำหรับทัวร์อื่น.
+        /// </summary>
+        public static string SearchTourNotFound {
+            get {
+                return ResourceManager.GetString("SearchTourNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ส่งรายชื่อผู้ติดต่อที่ล้มเหลว โปรดส่งใบสมัคร.
         /// </summary>
         public static string sendContactError {
             get {
@@ -569,7 +587,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bạn đã gửi liên hệ thành công. Chúng tôi sẽ hồi đáp nhanh nhất có thể.
+        ///   Looks up a localized string similar to คุณส่งให้ประสบความสำเร็จในการติดต่อ เราจะตอบสนองได้อย่างรวดเร็วที่สุด.
         /// </summary>
         public static string sendContactSuccess {
             get {
@@ -578,7 +596,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiếng thái.
+        ///   Looks up a localized string similar to ภาษาไทย.
         /// </summary>
         public static string ThaiLan {
             get {
@@ -587,7 +605,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to GIỚI THIỆU.
+        ///   Looks up a localized string similar to แนะนำ.
         /// </summary>
         public static string TitleAbout {
             get {
@@ -596,7 +614,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Danh sách tour.
+        ///   Looks up a localized string similar to รายการทัวร์.
         /// </summary>
         public static string TitleCategoryTour {
             get {
@@ -605,7 +623,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to LIÊN HỆ.
+        ///   Looks up a localized string similar to ติดต่อเรา.
         /// </summary>
         public static string TitleContact {
             get {
@@ -614,7 +632,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tour Đặc Sắc.
+        ///   Looks up a localized string similar to ทัวร์เด่น.
         /// </summary>
         public static string titleFeaturesTour {
             get {
@@ -623,7 +641,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Du lịch Việt Nam.
+        ///   Looks up a localized string similar to รายการท่องเที่ยวเวียดนาม.
         /// </summary>
         public static string titleHeadAbout {
             get {
@@ -632,7 +650,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Trang chủ.
+        ///   Looks up a localized string similar to หน้าหลัก.
         /// </summary>
         public static string titleHome {
             get {
@@ -641,7 +659,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Giỏ hàng.
+        ///   Looks up a localized string similar to ติระกล้าสินค้า.
         /// </summary>
         public static string TitleShopCard {
             get {
@@ -650,7 +668,16 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tour Miền Trung.
+        ///   Looks up a localized string similar to การท่องเที่ยวแห่งประเทศไทย - เวียดนาม.
+        /// </summary>
+        public static string titleTravel {
+            get {
+                return ResourceManager.GetString("titleTravel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ทัวร์์ภาคกลาง.
         /// </summary>
         public static string TourCentral {
             get {
@@ -659,7 +686,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tour Nước Ngoài.
+        ///   Looks up a localized string similar to ทัวร์ต่างประเทศ.
         /// </summary>
         public static string TourForeign {
             get {
@@ -668,7 +695,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tour Miền Bắc.
+        ///   Looks up a localized string similar to ทัวร์ภาคเหนือ.
         /// </summary>
         public static string TourNorthern {
             get {
@@ -677,7 +704,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tour Miền Nam.
+        ///   Looks up a localized string similar to ทัวร์ภาคใต้.
         /// </summary>
         public static string TourSouth {
             get {
@@ -686,7 +713,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bạn vui lòng nhập đầy đủ thông tin.
+        ///   Looks up a localized string similar to คุณป้อนข้อมูลที่ครบถ้วน.
         /// </summary>
         public static string vbErrorOderTour {
             get {
@@ -695,7 +722,7 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiếng việt.
+        ///   Looks up a localized string similar to ภาษาเวียดนาม.
         /// </summary>
         public static string Vietnames {
             get {

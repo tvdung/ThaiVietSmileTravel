@@ -1,7 +1,7 @@
 ﻿@model PagedList.IPagedList<ThaiVietSmileTravel.Models.Framework.tbl_Tour>
 @using PagedList.Mvc;
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = ThaiVietSmileTravel.Globalization.Resource.TitleCategoryTour;
     Layout = "~/Views/Shared/_Layout.cshtml";
     var checktitle = Model.First();
 }
@@ -36,17 +36,17 @@
 
                 <div class="col-sm-12 col-lg-12 col-md-12">
                     <div class="headitem">
-                        @if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                        @if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture == null)
                         {
-                            <h4>@item.TenTourVN</h4>
+                            <h4>@item.TenTourTL</h4>
                         }
                         else
                         {
-                            if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                            if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("vi"))
                             {
                                 <h4>@item.TenTourVN</h4>
                             }
-                            else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                            else if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("en"))
                             {
                                 <h4>@item.TenTourEN</h4>
                             }
@@ -60,10 +60,9 @@
                 </div>
                 <div class="col-sm-12 col-lg-12 col-md-12 caption">
                     <div class="col-sm-7 col-lg-7 col-md-7">
-                        <img src="@item.HinhAnh" style="height: 200px; margin-top: 10px;" />
+                        <img src="@item.HinhAnh" style="height: 136px; margin-top: 15px;" />
                     </div>
                     <div class="col-sm-5 col-lg-5 col-md-5" style="height: 75%; float: left;">
-
                         <h4>
                             <label>@item.SoNgay @ThaiVietSmileTravel.Globalization.Resource.lblDay @item.SoDem @ThaiVietSmileTravel.Globalization.Resource.lblNight</label>
                         </h4>

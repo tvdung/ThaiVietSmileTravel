@@ -1,6 +1,6 @@
 ﻿@model List<ThaiViet_Smile_Travel.Models.CardItemModel>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = @ThaiVietSmileTravel.Globalization.Resource.TitleShopCard;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -28,17 +28,17 @@
                 {
                     <tr>
                         <td>@item.Tour.Id</td>
-                        @if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture] == null)
+                        @if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture == null)
                         {
-                            <td>@item.Tour.TenTourVN</td>
+                            <td>@item.Tour.TenTourTL</td>
                         }
                         else
                         {
-                            if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("vi"))
+                            if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("vi"))
                             {
                                 <td>@item.Tour.TenTourVN</td>
                             }
-                            else if (Session[ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture].Equals("en"))
+                            else if (ThaiViet_Smile_Travel.Common.CommonConstants.CurrentCulture.Equals("en"))
                             {
                                 <td>@item.Tour.TenTourEN</td>
                             }

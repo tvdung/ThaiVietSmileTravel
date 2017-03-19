@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Script.Serialization;
-using Microsoft.ApplicationInsights.Channel;
 
-using ThaiViet_Smile_Travel.Models;
-using ThaiVietSmileTravel.Models.Framework;
-using ThaiViet_Smile_Travel.Common;
 using ThaiVietSmileTravel.Common;
-using System.Configuration;
+using ThaiVietSmileTravel.Globalization;
+using ThaiVietSmileTravel.Models.Framework;
+
+using ThaiViet_Smile_Travel.Common;
+using ThaiViet_Smile_Travel.Models;
 
 namespace ThaiViet_Smile_Travel.Controllers
 {
     public class CardController : BaseController
     {
-        TVSTravelDbContext db = new TVSTravelDbContext();
-        
+        private TVSTravelDbContext db = new TVSTravelDbContext();
+
         // GET: Card
         public ActionResult Index()
         {
             var card = Session[CommonConstants.CardSession];
             var list = new List<CardItemModel>();
-            if(card != null)
+            if (card != null)
             {
-               list = (List<CardItemModel>)card;
+                list = (List<CardItemModel>)card;
             }
 
             return View(list);
@@ -38,16 +37,19 @@ namespace ThaiViet_Smile_Travel.Controllers
             if (card != null)
             {
                 var list = (List<CardItemModel>)card;
-                if (list.Exists(x => x.Tour.Id != tourId)){
+                if (list.Exists(x => x.Tour.Id != tourId))
+                {
                     foreach (var temp in list)
                     {
                         if (temp.Tour.Id == tourId)
+                        {
                             return RedirectToAction("index");
+                        }
                     }
                     var item = new CardItemModel();
                     item.Tour = tour;
                     item.SoNguoi = soLuong;
-                    
+
                     list.Add(item);
                 }
                 Session[CommonConstants.CardSession] = list;
@@ -73,7 +75,9 @@ namespace ThaiViet_Smile_Travel.Controllers
             {
                 var jsonitem = jsoncard.SingleOrDefault(x => x.Tour.Id == item.Tour.Id);
                 if (jsonitem != null)
+                {
                     item.SoNguoi = jsonitem.SoNguoi;
+                }
             }
             Session[CommonConstants.CardSession] = sessionCard;
             return Json(new
@@ -86,7 +90,7 @@ namespace ThaiViet_Smile_Travel.Controllers
         {
             var sessionCard = (List<CardItemModel>)Session[CommonConstants.CardSession];
             sessionCard.RemoveAll(x => x.Tour.Id == id);
-            if(sessionCard.Count == 0)
+            if (sessionCard.Count == 0)
             {
                 Session[CommonConstants.CardSession] = null;
             }
@@ -100,59 +104,13 @@ namespace ThaiViet_Smile_Travel.Controllers
             });
         }
 
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult OrderTour([Bind(Include = "Id,TenKH,DiaChi,SoDT,Email,NgayDat,NgayCanDi,GhiChu,TrangThai")] tbl_Orders tbl_Orders)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        try
-        //        {
-        //            var id = Insert(tbl_Orders);
-        //            var cart = (List<CardItemModel>)Session[CommonConstants.CardSession];
-        //            string tentour = null;
-        //            int songuoi = 0;
-        //            foreach (var item in cart)
-        //            {
-        //                var orderDetail = new tbl_OrderDetail();
-        //                orderDetail.TourID = item.Tour.Id;
-        //                orderDetail.OrderID = id;
-        //                orderDetail.DonGia = item.Tour.DonGia;
-        //                orderDetail.SoNguoi = item.SoNguoi;
-        //                tentour += item.Tour.TenTourVN;
-        //                songuoi += item.SoNguoi;
-        //                InsertOrderDetail(orderDetail);
-        //            }
-
-        //            string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/NewOrderTour.cshtml"));
-        //            content = content.Replace("{{TenKH}}", tbl_Orders.TenKH);
-        //            content = content.Replace("{{SoDT}}", tbl_Orders.SoDT);
-        //            content = content.Replace("{{Email}}", tbl_Orders.Email);
-        //            content = content.Replace("{{DiaChi}}", tbl_Orders.DiaChi);
-        //            content = content.Replace("{{TenTour}}", tentour);
-        //            content = content.Replace("{{SoNguoi}}", songuoi.ToString("N0"));
-
-        //            var toEmail = ConfigurationManager.AppSettings["FromEmailAddress"].ToString();
-        //            new MailHelper().SendMail(tbl_Orders.Email, "Đơn hàng mới từ website thaivietsmile", tbl_Orders.TenKH, content, 0, 1);
-        //            new MailHelper().SendMail(toEmail, "Đơn hàng mới từ website thaivietsmile", tbl_Orders.TenKH, content, 0, 0);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return RedirectToAction("OrderTourError");
-        //        }
-        //        Session[CommonConstants.CardSession] = null;
-        //    }
-
-        //    return View("Index");
-        //}
-
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult OrderTour(string tenKH, string diaChi, string soDT, string email, DateTime? datetimepickerOrder, string ghiChu)
         {
             var cart = (List<CardItemModel>)Session[CommonConstants.CardSession];
-            var admin = new TVSTravelDbContext().tbl_Administrator.Where(x => x.IsAdmin);
+            var admin = db.tbl_Account.FirstOrDefault();
             if (!string.IsNullOrEmpty(tenKH) && !string.IsNullOrEmpty(diaChi) && !string.IsNullOrEmpty(soDT))
             {
                 var order = new tbl_Orders();
@@ -167,7 +125,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                 try
                 {
                     var id = Insert(order);
-                    
+
                     string tentour = null;
                     int songuoi = 0;
                     foreach (var item in cart)
@@ -182,7 +140,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                         InsertOrderDetail(orderDetail);
                     }
 
-                    string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/NewOrderTour.cshtml"));
+                    string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/OrderMail/NewOrderTourSendAdmin.cshtml"));
                     content = content.Replace("{{TenKH}}", tenKH);
                     content = content.Replace("{{SoDT}}", soDT);
                     content = content.Replace("{{Email}}", email);
@@ -190,33 +148,62 @@ namespace ThaiViet_Smile_Travel.Controllers
                     content = content.Replace("{{TenTour}}", tentour);
                     content = content.Replace("{{SoNguoi}}", songuoi.ToString("N0"));
 
-                    var tblAdministrator = admin.FirstOrDefault();
-                    if (tblAdministrator != null)
+                    if (admin.Email != null)
                     {
-                        var toEmail = tblAdministrator.Email;
+                        string contentCusstom = null;
+                        if (CommonConstants.CurrentCulture == null)
+                        {
+                            contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/OrderMail/NewOrderTourSendCustom.cshtml"));
+                            contentCusstom = contentCusstom.Replace("{{TenTour}}", tentour);
+                            new MailHelper().SendMail(order.Email, Resource.lblConfigOderTour, null, contentCusstom, false, false);
+                        }
+                        else if (CommonConstants.CurrentCulture.Equals("vi"))
+                        {
+                            contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/OrderMail/NewOrderTourSendCustom_vi.cshtml"));
+                            contentCusstom = contentCusstom.Replace("{{TenTour}}", tentour);
+                            new MailHelper().SendMail(order.Email, Resource.lblConfigOderTour, null, contentCusstom, false, false);
+                        }
+                        else
+                        {
+                            contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/OrderMail/NewOrderTourSendCustom_en.cshtml"));
+                            contentCusstom = contentCusstom.Replace("{{TenTour}}", tentour);
+                            new MailHelper().SendMail(order.Email, Resource.lblConfigOderTour, null, contentCusstom, false, false);
+                        }
+                        var toEmail = admin.Email;
+
                         //new MailHelper().SendMail(email, @ThaiVietSmileTravel.Globalization.Resource.lblConfigOderTour, tenKH, content, 0, 1);
-                        new MailHelper().SendMail(toEmail, @ThaiVietSmileTravel.Globalization.Resource.lblSubOderTour, tenKH, content, 0, 0);
+                        new MailHelper().SendMail(toEmail, Resource.lblSubOderTour, tenKH, content, false, true);
+                        Session[CommonConstants.CardSession] = null;
+                        return RedirectToAction("Success");
                     }
                 }
                 catch (Exception ex)
                 {
                     return RedirectToAction("OrderTourError");
                 }
-                Session[CommonConstants.CardSession] = null;
+                return RedirectToAction("OrderTourError");
             }
             else
             {
-                ViewBag.ValidateOrder = ThaiVietSmileTravel.Globalization.Resource.vbErrorOderTour;
+                ViewBag.ValidateOrder = Resource.vbErrorOderTour;
                 return View("Index", cart);
             }
-            return RedirectToAction("Success");
         }
 
         private int Insert(tbl_Orders order)
         {
-            db.tbl_Orders.Add(order);
-            db.SaveChanges();
-            return order.Id;
+            try
+            {
+                db.tbl_Orders.Add(order);
+                db.SaveChanges();
+                return order.Id;
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+                throw;
+            }
+            
         }
 
         private bool InsertOrderDetail(tbl_OrderDetail orderdetail)

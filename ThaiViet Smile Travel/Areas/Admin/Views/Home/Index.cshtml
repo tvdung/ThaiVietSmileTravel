@@ -23,9 +23,21 @@
         </a>
     </div>
     <div class="col-md-6 col-sm-6 col-xs-6">
-        <a data-toggle="tooltip" class="well top-block" href="#">
+        <a data-toggle="tooltip" class="well top-block" href="@Url.Action("ListContact", "Home")">
             <i class="glyphicon glyphicon-envelope red"></i>
             <h2>Danh sách liên hệ</h2>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" class="well top-block" href="@Url.Action("Banner")">
+            <i class="glyphicon glyphicon-import red"></i>
+            <h2>Banner</h2>
+        </a>
+    </div>
+    <div class="col-md-6 col-sm-6 col-xs-6">
+        <a data-toggle="tooltip" class="well top-block" href="@Url.Action("EditAbout", "Home", new{id = 1})">
+            <i class="glyphicon glyphicon-eye-open red"></i>
+            <h2>Giới thiệu</h2>
         </a>
     </div>
 </div>

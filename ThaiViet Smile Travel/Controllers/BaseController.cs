@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Threading;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+
+using ThaiViet_Smile_Travel.Common;
 
 namespace ThaiViet_Smile_Travel.Controllers
 {
@@ -15,15 +14,15 @@ namespace ThaiViet_Smile_Travel.Controllers
         protected override void Initialize(RequestContext requestContext)
         {
             base.Initialize(requestContext);
-            if(Session[Common.CommonConstants.CurrentCulture] != null)
+            if (CommonConstants.CurrentCulture != null)
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo(Session[Common.CommonConstants.CurrentCulture].ToString());
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo(Session[Common.CommonConstants.CurrentCulture].ToString());
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(CommonConstants.CurrentCulture.ToString());
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(CommonConstants.CurrentCulture.ToString());
             }
             else
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("vi");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("vi");
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("th");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("th");
             }
             double khach = 0;
             TextReader tr = new StreamReader(Server.MapPath("~/luottruycap.txt"));
@@ -40,7 +39,6 @@ namespace ThaiViet_Smile_Travel.Controllers
             }
             catch (Exception)
             {
-
             }
             ViewBag.LuotTruyCap = khach.ToString();
         }
@@ -51,7 +49,7 @@ namespace ThaiViet_Smile_Travel.Controllers
             Thread.CurrentThread.CurrentCulture = new CultureInfo(valueCulture);
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(valueCulture);
 
-            Session[Common.CommonConstants.CurrentCulture] = valueCulture;
+            CommonConstants.CurrentCulture = valueCulture;
             return Redirect(returnUrl);
         }
     }

@@ -340,15 +340,24 @@
     <value>Please enter the full information</value>
   </data>
   <data name="lblConfigFromEmailDisplayNameContact" xml:space="preserve">
-    <value>Confirmed contacts from website ThaiVietSmilTravel</value>
+    <value>Confirmed contacts from website thaivietsmile</value>
   </data>
   <data name="lblConfigFromEmailDisplayNameOder" xml:space="preserve">
-    <value>Booking confirmation from website ThaiVietSmilTravel</value>
+    <value>Booking confirmation from website thaivietsmile</value>
   </data>
   <data name="lblFromEmailDisplayNameContact" xml:space="preserve">
     <value>Contact customer</value>
   </data>
   <data name="lblFromEmailDisplayNameOder" xml:space="preserve">
     <value>Booking from customers</value>
+  </data>
+  <data name="lblSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="titleTravel" xml:space="preserve">
+    <value>Travel ThaiLan - VietNamese</value>
+  </data>
+  <data name="SearchTourNotFound" xml:space="preserve">
+    <value>This tour does not exist. Please search for another tour</value>
   </data>
 </root>
