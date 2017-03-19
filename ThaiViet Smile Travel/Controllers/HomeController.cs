@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web.Mvc;
 
 using PagedList;
 
 using ThaiVietSmileTravel.Common;
+using ThaiVietSmileTravel.Globalization;
 using ThaiVietSmileTravel.Models.Framework;
 
 using ThaiViet_Smile_Travel.Common;
 using ThaiViet_Smile_Travel.Models;
-using ThaiVietSmileTravel.Globalization;
 
 namespace ThaiViet_Smile_Travel.Controllers
 {
@@ -40,7 +39,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                 }
                 if (result.Count == 0)
                 {
-                    ViewBag.SearchTourNotFound = ThaiVietSmileTravel.Globalization.Resource.SearchTourNotFound;
+                    ViewBag.SearchTourNotFound = Resource.SearchTourNotFound;
                 }
                 return View(result);
             }
@@ -104,14 +103,13 @@ namespace ThaiViet_Smile_Travel.Controllers
 
                     if (admin != null)
                     {
-
                         string contentCusstom = null;
                         if (CommonConstants.CurrentCulture == null)
                         {
                             contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/ContactMail/ContactCustom.cshtml"));
                             new MailHelper().SendMail(tbl_Contact.Email, Resource.lblConfigFromEmailDisplayNameContact, null, contentCusstom, true, true);
                         }
-                       else if (CommonConstants.CurrentCulture.Equals("vi"))
+                        else if (CommonConstants.CurrentCulture.Equals("vi"))
                         {
                             contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/ContactMail/ContactCustom_vi.cshtml"));
                             new MailHelper().SendMail(tbl_Contact.Email, Resource.lblConfigFromEmailDisplayNameContact, null, contentCusstom, true, true);
@@ -121,7 +119,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                             contentCusstom = System.IO.File.ReadAllText(Server.MapPath("~/Views/ContactMail/ContactCustom_en.cshtml"));
                             new MailHelper().SendMail(tbl_Contact.Email, Resource.lblConfigFromEmailDisplayNameContact, null, contentCusstom, true, true);
                         }
-                        
+
                         new MailHelper().SendMail(admin.Email, "Liên hệ từ khách hàng ", tbl_Contact.Ho + " " + tbl_Contact.Ten, content, true, false);
                         Session[CommonConstants.CardSession] = null;
                         return RedirectToAction("SendContactSuccess");
@@ -136,47 +134,6 @@ namespace ThaiViet_Smile_Travel.Controllers
 
             return View("Contact");
         }
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult ContactResult(string firstName, string lastName, string email, string company, string phoneNumber, string adress, string comments)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var contact = new tbl_Contact();
-        //        contact.Ho = firstName;
-        //        contact.Ten = lastName;
-        //        contact.Email = email;
-        //        contact.SoDT = phoneNumber;
-        //        contact.DiaChi = adress;
-        //        contact.TenCongTy = company;
-        //        contact.GhiChu = comments;
-
-        //        try
-        //        {
-
-        //            db.SaveChanges();
-        //            string content = System.IO.File.ReadAllText(Server.MapPath("~/Views/ContactCustom.cshtml"));
-        //            content = content.Replace("{{TenKH}}", firstName + " " + lastName);
-        //            content = content.Replace("{{SoDT}}", phoneNumber);
-        //            content = content.Replace("{{Email}}", email);
-        //            content = content.Replace("{{DiaChi}}", adress);
-        //            content = content.Replace("{{TenCompany}}", company);
-        //            content = content.Replace("{{Comment}}", comments);
-
-        //            var toEmail = ConfigurationManager.AppSettings["FromEmailAddress"].ToString();
-        //            new MailHelper().SendMail(email, "Xác nhận liên hệ tới website thaivietsmile", firstName + " " + lastName, content, 1, 1);
-        //            new MailHelper().SendMail(toEmail, "Liên hệ khách hàng từ website thaivietsmile", firstName + " " + lastName, content, 1, 0);
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            return RedirectToAction("SendContactError");
-        //        }
-        //        Session[CommonConstants.CardSession] = null;
-        //        return RedirectToAction("SendContactSuccess");
-        //    }
-        //    return View();
-        //}
 
         public ActionResult SendContactSuccess()
         {

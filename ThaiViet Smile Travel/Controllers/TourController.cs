@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using System.Web.UI;
 
 using PagedList;
 
@@ -13,7 +10,8 @@ namespace ThaiViet_Smile_Travel.Controllers
 {
     public class TourController : BaseController
     {
-        TVSTravelDbContext db = new TVSTravelDbContext();
+        private TVSTravelDbContext db = new TVSTravelDbContext();
+
         // GET: Tour
 
         public ActionResult Index(int? categoryId, int page = 1, int pageSize = 6)
@@ -21,7 +19,7 @@ namespace ThaiViet_Smile_Travel.Controllers
             try
             {
                 var category = db.tbl_Categories
-                .Find(categoryId);
+                    .Find(categoryId);
                 if (category != null)
                 {
                     ViewBag.TitleCategory = category.TenVN;
@@ -48,8 +46,8 @@ namespace ThaiViet_Smile_Travel.Controllers
             if (id != 0)
             {
                 var result = db.tbl_Tour
-                .Where(x => x.Id == id)
-                .FirstOrDefault();
+                    .Where(x => x.Id == id)
+                    .FirstOrDefault();
                 return View(result);
             }
             else

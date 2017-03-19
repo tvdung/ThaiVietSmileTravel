@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 
+using ThaiVietSmileTravel.Globalization;
 using ThaiVietSmileTravel.Models.Framework;
 
 namespace ThaiVietSmileTravel.Common
@@ -36,11 +37,11 @@ namespace ThaiVietSmileTravel.Common
                 {
                     if (custom == false)
                     {
-                        fromEmailDisplayName = Globalization.Resource.lblFromEmailDisplayNameOder + " " + name;
+                        fromEmailDisplayName = subject + " " + name;
                     }
                     else
                     {
-                        fromEmailDisplayName = Globalization.Resource.lblConfigFromEmailDisplayNameOder;
+                        fromEmailDisplayName = subject;
                     }
                 }
 

@@ -2486,6 +2486,9 @@
     <Content Include="Views\ContactMail\ContactCustom_en.cshtml" />
     <Content Include="Views\ContactMail\ContactCustom_vi.cshtml" />
     <Content Include="Views\OrderMail\NewOrderTourSendAdmin.cshtml" />
+    <Content Include="Views\OrderMail\NewOrderTourSendCustom.cshtml" />
+    <Content Include="Views\OrderMail\NewOrderTourSendCustom_vi.cshtml" />
+    <Content Include="Views\OrderMail\NewOrderTourSendCustom_en.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

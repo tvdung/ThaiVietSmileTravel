@@ -7,6 +7,7 @@ namespace ThaiVietSmileTravel.Models.Framework
         public TVSTravelDbContext()
             : base("name=TVSTravelDbContext")
         {
+            
         }
 
         public virtual DbSet<tbl_About> tbl_About { get; set; }

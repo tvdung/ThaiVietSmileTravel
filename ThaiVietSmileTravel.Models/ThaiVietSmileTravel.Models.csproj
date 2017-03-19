@@ -97,7 +97,12 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ThaiVietSmileTravel.Globalization\ThaiVietSmileTravel.Globalization.csproj">
+      <Project>{0becb5d3-9f90-4b95-862b-db36d88ce7b3}</Project>
+      <Name>ThaiVietSmileTravel.Globalization</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
