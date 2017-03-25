@@ -9,7 +9,7 @@ CKEDITOR.editorConfig = function( config )
 	// config.language = 'fr';
     // config.uiColor = '#AADC6E';
 
-    config.language = 'en';
+    config.language = 'vi';
 
     config.filebrowserBrowseUrl = "/Areas/Admin/Content/ckfinder/ckfinder.html";
     config.filebrowserImageUrl = "/Areas/Admin/Content/ckfinder/ckfinder.html?type=Images";

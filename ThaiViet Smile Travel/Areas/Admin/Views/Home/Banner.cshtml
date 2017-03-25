@@ -36,10 +36,13 @@
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             Sửa
                         </a>
-                        <a class="btn btn-primary" href="@Url.Action("UpdateStatusBanner", "Home", new {id = @item.Id })">
-                            <i class="glyphicon glyphicon-check icon-white"></i>
-                            Cập nhật trạng thái
-                        </a>
+                        @if (item.Id != 1)
+                        {
+                            <a class="btn btn-primary" href="@Url.Action("UpdateStatusBanner", "Home", new {id = @item.Id })">
+                                <i class="glyphicon glyphicon-check icon-white"></i>
+                                Cập nhật trạng thái
+                            </a>
+                        }
                     </td>
                 </tr>
             }

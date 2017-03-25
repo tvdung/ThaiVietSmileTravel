@@ -1,14 +1,25 @@
+﻿/// <reference path="ckfinder.html" />
 /*
- Copyright (c) 2007-2016, CKSource - Frederico Knabben. All rights reserved.
- For licensing, see LICENSE.html or http://cksource.com/ckfinder/license
- */
+Copyright (c) 2003-2015, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see license.txt or http://cksource.com/ckfinder/license
+*/
 
-var config = {};
+CKFinder.customConfig = function( config )
+{
+	// Define changes to default configuration here.
+	// For the list of available options, check:
+	// http://docs.cksource.com/ckfinder_2.x_api/symbols/CKFinder.config.html
 
-// Set your configuration options below.
+	// Sample configuration options:
+	// config.uiColor = '#BDE31E';
+	// config.language = 'fr';
+	// config.removePlugins = 'basket';
+    config.language = 'en';
 
-// Examples:
-// config.language = 'pl';
-// config.skin = 'jquery-mobile';
-
-CKFinder.define( config );
+    config.filebrowserBrowseUrl = "/Areas/Admin/Content/ckfinder/ckfinder.html";
+    config.filebrowserImageUrl = "/Areas/Admin/Content/ckfinder/ckfinder.html?type=Images";
+    config.filebrowserFlashUrl = "/Areas/Admin/Content/ckfinder/ckfinder.html?type=Flash";
+    config.filebrowserUploadUrl = "/Areas/Admin/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files";
+    config.filebrowserImageUploadUrl = "/Areas/Admin/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images";
+    config.filebrowserFlashUploadUrl = "/Areas/Admin/Content/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash";
+};

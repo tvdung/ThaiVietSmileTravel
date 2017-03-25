@@ -360,4 +360,10 @@
   <data name="SearchTourNotFound" xml:space="preserve">
     <value>การเดินทางครั้งนี้ไม่ได้อยู่ กรุณาค้นหาสำหรับทัวร์อื่น</value>
   </data>
+  <data name="titleOrderFailed" xml:space="preserve">
+    <value>การท่องเที่ยวไม่ประสบความสำเร็จ</value>
+  </data>
+  <data name="titleTourDetail" xml:space="preserve">
+    <value>รายละเอียดทัวร์</value>
+  </data>
 </root>

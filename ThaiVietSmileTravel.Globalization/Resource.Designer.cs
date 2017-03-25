@@ -659,11 +659,29 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to การท่องเที่ยวไม่ประสบความสำเร็จ.
+        /// </summary>
+        public static string titleOrderFailed {
+            get {
+                return ResourceManager.GetString("titleOrderFailed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ติระกล้าสินค้า.
         /// </summary>
         public static string TitleShopCard {
             get {
                 return ResourceManager.GetString("TitleShopCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to รายละเอียดทัวร์.
+        /// </summary>
+        public static string titleTourDetail {
+            get {
+                return ResourceManager.GetString("titleTourDetail", resourceCulture);
             }
         }
         

@@ -360,4 +360,10 @@
   <data name="SearchTourNotFound" xml:space="preserve">
     <value>This tour does not exist. Please search for another tour</value>
   </data>
+  <data name="titleOrderFailed" xml:space="preserve">
+    <value>Order Failed</value>
+  </data>
+  <data name="titleTourDetail" xml:space="preserve">
+    <value>Detail tour</value>
+  </data>
 </root>
