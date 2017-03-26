@@ -10,6 +10,7 @@ using ThaiVietSmileTravel.Models.Framework;
 
 using ThaiViet_Smile_Travel.Common;
 using ThaiViet_Smile_Travel.Models;
+using System.Globalization;
 
 namespace ThaiViet_Smile_Travel.Controllers
 {
@@ -107,7 +108,7 @@ namespace ThaiViet_Smile_Travel.Controllers
         [ValidateInput(false)]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult OrderTour(string tenKH, string diaChi, string soDT, string email, DateTime? datetimepickerOrder, string ghiChu)
+        public ActionResult OrderTour(string tenKH, string diaChi, string soDT, string email, string datetimepickerOrder, string ghiChu)
         {
             var cart = (List<CardItemModel>)Session[CommonConstants.CardSession];
             var admin = db.tbl_Account.FirstOrDefault();
@@ -119,7 +120,9 @@ namespace ThaiViet_Smile_Travel.Controllers
                 order.SoDT = soDT;
                 order.Email = email;
                 order.NgayDat = DateTime.Now;
-                order.NgayCanDi = (DateTime)(datetimepickerOrder == null ? DateTime.Now : datetimepickerOrder);
+                order.NgayCanDi = datetimepickerOrder == null ? DateTime.Now : DateTime.ParseExact(datetimepickerOrder, "yyyy-MM-dd",
+                                            new CultureInfo("en-US"),
+                                            DateTimeStyles.None);
                 order.GhiChu = ghiChu;
 
                 try
@@ -171,8 +174,7 @@ namespace ThaiViet_Smile_Travel.Controllers
                         }
                         var toEmail = admin.Email;
 
-                        //new MailHelper().SendMail(email, @ThaiVietSmileTravel.Globalization.Resource.lblConfigOderTour, tenKH, content, 0, 1);
-                        new MailHelper().SendMail(toEmail, Resource.lblSubOderTour, tenKH, content, false, true);
+                        new MailHelper().SendMail(toEmail, "Khách hàng đặt tour mới", tenKH, content, false, true);
                         Session[CommonConstants.CardSession] = null;
                         return RedirectToAction("Success");
                     }

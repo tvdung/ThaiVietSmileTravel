@@ -366,4 +366,7 @@
   <data name="titleTourDetail" xml:space="preserve">
     <value>รายละเอียดทัวร์</value>
   </data>
+  <data name="titleSuccess" xml:space="preserve">
+    <value>ประสบความสำเร็จ</value>
+  </data>
 </root>

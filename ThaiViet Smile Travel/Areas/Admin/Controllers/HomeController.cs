@@ -110,14 +110,14 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
             return View(tbl_Tour);
         }
 
-        
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult EditTour([Bind(Include = "Id,TenTourEN,TenTourTL,TenTourVN,DonGia,DonViTinh,NgayDuKien,SoNgay,SoDem,SoCho,NoiDungEN,NoiDungTL,NoiDungVN,HinhAnh,KhuyenMai,TourHot,NgayTao,CategoryId,IsActive")] tbl_Tour tbl_Tour)
         {
             if (ModelState.IsValid)
             {
-                
+
                 db.Entry(tbl_Tour).State = EntityState.Modified;
                 db.SaveChanges();
                 var model = db.tbl_Tour.ToList();
@@ -129,7 +129,7 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             tbl_Tour tbl_Tour = db.tbl_Tour.Find(id);
-            if(tbl_Tour.IsActive)
+            if (tbl_Tour.IsActive)
                 tbl_Tour.IsActive = false;
             else
                 tbl_Tour.IsActive = true;
@@ -196,23 +196,10 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (tbl_Account.Password != null)
-                {
-                    tbl_Account.Password = Common.CommonHelper.Encrypt(tbl_Account.Password, true);
-                }
-                else
-                {
-                    tbl_Account.Password = db.tbl_Account.Find(tbl_Account.UserId).Password;
-                }
-                if (tbl_Account.PasswordEmail != null)
-                {
-                    tbl_Account.PasswordEmail = Common.CommonHelper.Encrypt(tbl_Account.PasswordEmail, true);
-                }
-                else
-                {
-                    tbl_Account.PasswordEmail = db.tbl_Account.Find(tbl_Account.UserId).PasswordEmail;
-                }
-                //db.Entry(tbl_Account).State = EntityState.Modified;
+                tbl_Account.Password = Common.CommonHelper.Encrypt(tbl_Account.Password, true);
+                tbl_Account.PasswordEmail = Common.CommonHelper.Encrypt(tbl_Account.PasswordEmail, true);
+                tbl_Account.IsAdmin = true;
+                db.Entry(tbl_Account).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -271,7 +258,7 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
                 if (tbl_Orders.TrangThai)
                     tbl_Orders.TrangThai = false;
                 else
-                tbl_Orders.TrangThai = true;
+                    tbl_Orders.TrangThai = true;
                 db.SaveChanges();
             }
             var model = db.tbl_Orders.ToList().OrderByDescending(x => x.NgayDat);
@@ -328,7 +315,7 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
             }
             else
             {
-                if(tbl_Banner.IsActive)
+                if (tbl_Banner.IsActive)
                     tbl_Banner.IsActive = false;
                 else
                     tbl_Banner.IsActive = true;

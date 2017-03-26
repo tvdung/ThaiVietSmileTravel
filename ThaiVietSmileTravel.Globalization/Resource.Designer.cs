@@ -677,6 +677,15 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ประสบความสำเร็จ.
+        /// </summary>
+        public static string titleSuccess {
+            get {
+                return ResourceManager.GetString("titleSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to รายละเอียดทัวร์.
         /// </summary>
         public static string titleTourDetail {

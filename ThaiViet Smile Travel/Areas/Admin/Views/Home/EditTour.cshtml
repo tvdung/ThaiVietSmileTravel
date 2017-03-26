@@ -3,7 +3,23 @@
     ViewBag.Title = "EditTour";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
+@section jFooter{
+    <script type="text/javascript">
+        
+        CKEDITOR.replace("NoiDungVN");
+        CKEDITOR.replace("NoiDungEN");
+        CKEDITOR.replace("NoiDungTL");
+        $("#Browse").click(function () {
+            var finder = new CKFinder();
+            finder.selectActionFunction = function (fileUrl) {
+                //Lấy file cuối cùng
+                //fileUrl = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
+                $('#HinhAnh').val(fileUrl);
+            };
+            finder.popup();
+        })
+    </script>
+}
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -56,9 +72,7 @@
                                 @Html.TextAreaFor(model => model.NoiDungVN, new { htmlAttributes = new { @class = "form-control", placeholder = "Hãy nhập nội dung tour bằng tiếng việt" } })
                                 @Html.ValidationMessageFor(model => model.NoiDungVN, "", new { @class = "text-danger" })
                             </div>
-                            <script type="text/javascript">
-                            CKEDITOR.replace("NoiDungVN");
-                            </script>
+                            
                         </div>
                         <div class="row form-group">
                             @Html.LabelFor(model => model.NoiDungEN, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -66,9 +80,7 @@
                                 @Html.TextAreaFor(model => model.NoiDungEN, new { htmlAttributes = new { @class = "form-control", placeholder = "Hãy nhập nội dung tour bằng tiếng anh" } })
                                 @Html.ValidationMessageFor(model => model.NoiDungEN, "", new { @class = "text-danger" })
                             </div>
-                            <script type="text/javascript">
-                            CKEDITOR.replace("NoiDungEN");
-                            </script>
+                           
                         </div>
                         <div class="row form-group">
                             @Html.LabelFor(model => model.NoiDungTL, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -76,9 +88,7 @@
                                 @Html.TextAreaFor(model => model.NoiDungTL, new { htmlAttributes = new { @class = "form-control", placeholder = "Hãy nhập nội dung tour bằng thái" } })
                                 @Html.ValidationMessageFor(model => model.NoiDungTL, "", new { @class = "text-danger" })
                             </div>
-                            <script type="text/javascript">
-                            CKEDITOR.replace("NoiDungTL");
-                            </script>
+                           
                         </div>
 
                         <div class="row form-group">
@@ -112,17 +122,7 @@
                             <div class="col-md-2">
                                 <input type="button" id="Browse" value="Chọn hình" class="btn btn-default" />
                             </div>
-                            <script>
-                            $("#Browse").click(function () {
-                                var finder = new CKFinder();
-                                finder.selectActionFunction = function (fileUrl) {
-                                    //Lấy file cuối cùng
-                                    //fileUrl = fileUrl.substring(fileUrl.lastIndexOf("/") + 1);
-                                    $('#HinhAnh').val(fileUrl);
-                                };
-                                finder.popup();
-                            })
-                            </script>
+
                         </div>
                         <div class="row form-group">
                             <label class="control-label col-md-2">Danh mục tour</label>
@@ -181,7 +181,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     <label class="control-label" style="font-weight:bold;">Trạng thái tour</label>
-                                    @Html.CheckBoxFor(model => model.IsActive, new { @class = "checkbox-inline"})
+                                    @Html.CheckBoxFor(model => model.IsActive, new { @class = "checkbox-inline" })
                                     @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
                                 </div>
                                 <script>
