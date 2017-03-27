@@ -44,9 +44,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CKFinder, Version=2.4.1.2663, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
+    <Reference Include="CKFinder, Version=2.6.0.2792, Culture=neutral, PublicKeyToken=579e7adc719a1423, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ckfinder_aspnet_2.4.2\ckfinder\bin\Release\CKFinder.dll</HintPath>
+      <HintPath>Areas\Admin\Content\ckfinder\bin\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_FileEditor, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Areas\Admin\Content\ckfinder\bin\CKFinder_FileEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CKFinder_ImageResize, Version=2.1.0.1132, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Areas\Admin\Content\ckfinder\bin\CKFinder_ImageResize.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
@@ -1408,48 +1416,7 @@
     <Content Include="Areas\Admin\Content\ckeditor\skins\v2\skin.js" />
     <Content Include="Areas\Admin\Content\ckeditor\skins\v2\templates.css" />
     <Content Include="Areas\Admin\Content\ckeditor\themes\default\theme.js" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Autofac.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\AWSSDK.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.Config.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.Core.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.Host.Owin.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.KeyValue.FileSystem.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.Logs.NLog.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.CKFinder.Connector.WebApp.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.Amazon.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.Azure.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.Dropbox.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.Ftp.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\CKSource.FileSystem.Local.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Debug\CKFinder.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Debug\CKFinder.pdb" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Dropbox.Api.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\ImageProcessor.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Azure.KeyVault.Core.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Data.Edm.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Data.OData.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Data.Services.Client.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Owin.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Owin.Host.SystemWeb.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Owin.Security.Cookies.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Owin.Security.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Threading.Tasks.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.Threading.Tasks.Extensions.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Microsoft.WindowsAzure.Storage.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Newtonsoft.Json.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\NLog.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Owin.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\Release\CKFinder.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\RestSharp.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Data.SqlServerCe.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Net.FtpClient.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Net.Http.Extensions.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Net.Http.Formatting.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Net.Http.Primitives.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\bin\System.Spatial.dll" />
-    <Content Include="Areas\Admin\Content\ckfinder\CHANGELOG.html" />
+    <Content Include="Areas\Admin\Content\ckfinder.html" />
     <Content Include="Areas\Admin\Content\ckfinder\changelog.txt" />
     <Content Include="Areas\Admin\Content\ckfinder\ckfinder.html" />
     <Content Include="Areas\Admin\Content\ckfinder\ckfinder.js" />
@@ -1813,7 +1780,6 @@
     <Content Include="Areas\Admin\Content\ckfinder\lang\zh-cn.js" />
     <Content Include="Areas\Admin\Content\ckfinder\lang\zh-tw.js" />
     <Content Include="Areas\Admin\Content\ckfinder\lang\_translationstatus.txt" />
-    <Content Include="Areas\Admin\Content\ckfinder\LICENSE.html" />
     <Content Include="Areas\Admin\Content\ckfinder\license.txt" />
     <Content Include="Areas\Admin\Content\ckfinder\plugins\dummy\lang\en.js" />
     <Content Include="Areas\Admin\Content\ckfinder\plugins\dummy\lang\pl.js" />
@@ -1869,7 +1835,66 @@
     <Content Include="Areas\Admin\Content\ckfinder\plugins\watermark\bin\Release\CKFinder_Watermark.dll" />
     <Content Include="Areas\Admin\Content\ckfinder\plugins\watermark\bin\Release\CKFinder_Watermark.pdb" />
     <Content Include="Areas\Admin\Content\ckfinder\plugins\watermark\logo.gif" />
-    <Content Include="Areas\Admin\Content\ckfinder\README.html" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\app.css" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\host.css" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\ai.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\avi.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\bmp.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\cs.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\default.icon.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\dll.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\doc.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\docx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\exe.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\fla.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\gif.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\jpg.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\js.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\mdb.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\mp3.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\ogg.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\pdf.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\ppt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\pptx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\rdp.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\swf.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\swt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\txt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\vsd.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\xls.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\xlsx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\xml.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\16\zip.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\ai.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\avi.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\cs.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\default.icon.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\dll.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\doc.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\docx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\exe.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\fla.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\gif.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\jpg.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\js.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\mdb.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\mp3.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\ogg.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\pdf.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\ppt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\pptx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\rdp.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\swf.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\swt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\txt.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\vsd.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\xls.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\xlsx.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\xml.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\images\icons\32\zip.png" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\skin.js" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\uipanel.css" />
     <Content Include="Areas\Admin\Content\ckfinder\skins\kama\app.css" />
     <Content Include="Areas\Admin\Content\ckfinder\skins\kama\host.css" />
     <Content Include="Areas\Admin\Content\ckfinder\skins\kama\images\ckffolder.gif" />
@@ -2048,6 +2073,7 @@
     <Content Include="Areas\Admin\Content\css\bootstrap-toggle.min.css" />
     <Content Include="Areas\Admin\Content\css\bootstrap-united.min.css" />
     <Content Include="Areas\Admin\Content\css\charisma-app.css" />
+    <Content Include="Areas\Admin\Content\css\chosen-sprite.png" />
     <Content Include="Areas\Admin\Content\css\elfinder.min.css" />
     <Content Include="Areas\Admin\Content\css\elfinder.theme.css" />
     <Content Include="Areas\Admin\Content\css\form-elements.css" />
@@ -2091,6 +2117,7 @@
     <Content Include="Areas\Admin\Content\js\charisma.js" />
     <Content Include="Areas\Admin\Content\js\chosen.jquery.js" />
     <Content Include="Areas\Admin\Content\js\init-chart.js" />
+    <Content Include="Areas\Admin\Content\js\jquery-3.1.1.min.js" />
     <Content Include="Areas\Admin\Content\js\jquery.autogrow-textarea.js" />
     <Content Include="Areas\Admin\Content\js\jquery.cookie.js" />
     <Content Include="Areas\Admin\Content\js\jquery.dataTables.min.js" />
@@ -2165,8 +2192,6 @@
     <Content Include="Areas\Admin\Views\Home\CreateTour.cshtml" />
     <Content Include="Areas\Admin\Views\Home\EditTour.cshtml" />
     <Content Include="Areas\Admin\Content\ckeditor\.htaccess" />
-    <Content Include="Areas\Admin\Content\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
-    <Content Include="Areas\Admin\Content\ckfinder\userfiles\.htaccess" />
     <Content Include="Areas\Admin\Content\bower_components\bootstrap-tour\.bower.json" />
     <Content Include="Areas\Admin\Content\bower_components\bootstrap-tour\.gitignore" />
     <Content Include="Areas\Admin\Content\bower_components\bootstrap-tour\.travis.yml" />
@@ -2383,57 +2408,13 @@
     <Content Include="Areas\Admin\Views\Home\Banner.cshtml" />
     <Content Include="Areas\Admin\Views\Home\EditBanner.cshtml" />
     <Content Include="Areas\Admin\Content\files\Yêu cầu cần có trong website TVS Travel.doc" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\bg.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\bs.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ca.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\cs.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\cy.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\da.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\de-ch.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\de.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\el.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\en.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\eo.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\es-mx.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\es.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\et.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\eu.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\fa.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\fi.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\fr.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\gu.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\he.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\hi.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\hr.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\hu.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\it.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ja.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ko.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ku.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\lt.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\lv.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\nb.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\nl.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\nn.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\no.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\pl.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\pt-br.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ro.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\ru.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\sk.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\sl.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\sr.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\sv.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\tr.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\uk.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\vi.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\zh-cn.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\lang\zh-tw.json" />
-    <Content Include="Areas\Admin\Content\ckfinder\NLog.config" />
-    <Content Include="Areas\Admin\Content\ckfinder\packages.config" />
-    <Content Include="Areas\Admin\Content\ckfinder\plugins\README.md" />
-    <Content Include="Areas\Admin\Content\ckfinder\README.md" />
-    <Content Include="Areas\Admin\Content\ckfinder\Web.config" />
+    <Content Include="Areas\Admin\Content\ckfinder_Backup.zip" />
+    <Content Include="Areas\Admin\Content\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <Content Include="Areas\Admin\Content\ckfinder\userfiles\.htaccess" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Properties\PublishProfiles\ThaiVietSmileTravel.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -2492,17 +2473,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\amd64\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\de\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\es\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\fr\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\it\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\ja\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\ko\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\ru\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\x86\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\zh-Hans\" />
-    <Folder Include="Areas\Admin\Content\ckfinder\bin\zh-Hant\" />
     <Folder Include="Areas\Admin\Content\ckfinder\libs\" />
     <Folder Include="Areas\Admin\Content\ckfinder\samples\" />
     <Folder Include="Areas\Admin\Content\ckfinder\skins\core\" />
@@ -2551,7 +2521,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>8503</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8503/</IISUrl>
+          <IISUrl>http://localhost:8505/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

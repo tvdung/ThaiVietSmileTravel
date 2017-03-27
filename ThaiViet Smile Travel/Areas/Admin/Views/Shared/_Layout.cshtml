@@ -8,200 +8,206 @@
 
 <!DOCTYPE html>
 <html>
-    <head>
-        <!--
-        ===
-        This comment should NOT be removed.
+<head>
+    <!--
+    ===
+    This comment should NOT be removed.
 
-        Charisma v2.0.0
+    Charisma v2.0.0
 
-        Copyright 2012-2014 Muhammad Usman
-        Licensed under the Apache License v2.0
-        http://www.apache.org/licenses/LICENSE-2.0
+    Copyright 2012-2014 Muhammad Usman
+    Licensed under the Apache License v2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-        http://usman.it
-        http://twitter.com/halalit_usman
-        ===
-        -->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Trang quản trị</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
-        <meta name="author" content="Muhammad Usman">
-        <!-- The styles -->
-        <link href="~/Areas/Admin/Content/css/bootstrap-cerulean.min.css" rel="stylesheet" />
-        <link href="~/Areas/Admin/Content/css/charisma-app.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-        <link href="~/Areas/Admin/Content/bower_components/chosen/chosen.min.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/bower_components/colorbox/example3/colorbox.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/bower_components/responsive-tables/responsive-tables.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/jquery.noty.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/noty_theme_default.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/elfinder.min.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/elfinder.theme.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/jquery.iphone.toggle.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/uploadify.css" rel="stylesheet">
-        <link href="~/Areas/Admin/Content/css/animate.min.css" rel="stylesheet">
-        <!-- jQuery -->
-        <script src="~/Areas/Admin/Content/bower_components/jquery/jquery.min.js"></script>
-        <script src="~/Areas/Admin/Content/ckeditor/ckeditor.js"></script>
-        <script src="~/Areas/Admin/Content/ckfinder/ckfinder.js"></script>
+    http://usman.it
+    http://twitter.com/halalit_usman
+    ===
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Trang quản trị</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+    <!-- The styles -->
+    <link href="~/Areas/Admin/Content/css/bootstrap-cerulean.min.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/css/charisma-app.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+    <link href="~/Areas/Admin/Content/bower_components/chosen/chosen.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/bower_components/colorbox/example3/colorbox.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/bower_components/responsive-tables/responsive-tables.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/jquery.noty.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/noty_theme_default.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/elfinder.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/elfinder.theme.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/jquery.iphone.toggle.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/uploadify.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/css/animate.min.css" rel="stylesheet">
+   
+    <!-- jQuery -->
+    <script src="~/Areas/Admin/Content/bower_components/jquery/jquery.min.js"></script>
+    <script src="~/Areas/Admin/Content/ckeditor/ckeditor.js"></script>
+    <script src="~/Areas/Admin/Content/ckfinder/ckfinder.js"></script>
+    <link href="~/Areas/Admin/Content/css/bootstrap-toggle.min.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/Content/js/bootstrap-toggle.min.js"></script>
+    <link href="~/Areas/Admin/Content/css/bootstrap-chosen.css" rel="stylesheet" />
+    <script src="~/Areas/Admin/Content/js/chosen.jquery.js"></script>
 
-        <link href="~/Areas/Admin/Content/css/bootstrap-toggle.min.css" rel="stylesheet" />
-        <script src="~/Areas/Admin/Content/js/bootstrap-toggle.min.js"></script>
-        <link href="~/Areas/Admin/Content/css/bootstrap-chosen.css" rel="stylesheet" />
-        <script src="~/Areas/Admin/Content/js/chosen.jquery.js"></script>
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+<body>
+    <!-- topbar starts -->
+    <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-inner">
+            <button type="button" class="navbar-toggle pull-left animated flip">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
 
-        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <!-- The fav icon -->
-        <link rel="shortcut icon" href="img/favicon.ico">
-    </head>
-    <body>
-        <!-- topbar starts -->
-        <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-inner">
-                <button type="button" class="navbar-toggle pull-left animated flip">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- user dropdown starts -->
-                <div class="btn-group pull-right">
-                    <a class="ajax-link" style="color: white;" href="@Url.Action("Logout", "Home")">
-                        <i class="glyphicon glyphicon-log-out"></i><span> Thoát</span></a>
-                </div>
-                <!-- user dropdown ends -->
-
-                <!-- theme selector ends -->
-                <ul class="collapse navbar-collapse nav navbar-nav top-menu">
-                    <li>
-                        <a href="~/Home"><i class="glyphicon glyphicon-globe"></i> Tới trang web</a>
-                    </li>
-
-                </ul>
+            <!-- user dropdown starts -->
+            <div class="btn-group pull-right">
+                <a class="ajax-link" style="color: white;" href="@Url.Action("Logout", "Home")">
+                    <i class="glyphicon glyphicon-log-out"></i><span> Thoát</span>
+                </a>
             </div>
-        </div>
-        <!-- topbar ends -->
-        <div class="ch-container">
-            <div class="row">
+            <!-- user dropdown ends -->
+            <!-- theme selector ends -->
+            <ul class="collapse navbar-collapse nav navbar-nav top-menu">
+                <li>
+                    <a href="~/Home"><i class="glyphicon glyphicon-globe"></i> Tới trang web</a>
+                </li>
 
-                <!-- left menu starts -->
-                <div class="col-sm-2 col-lg-2">
-                    <div class="sidebar-nav">
-                        <div class="nav-canvas">
-                            <div class="nav-sm nav nav-stacked">
-                            </div>
-                            <ul class="nav nav-pills nav-stacked main-menu">
-                                <li class="nav-header">Chức năng</li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("Index", "Home")">
-                                        <i class="glyphicon glyphicon-home"></i><span> Trang chủ</span></a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("Tour", "Home")">
-                                        <i class="glyphicon glyphicon-list-alt"></i><span> Danh sách tour</span></a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("CreateTour", "Home")">
-                                        <i class="glyphicon glyphicon-plus-sign"></i><span> Thêm tour</span></a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("OrderList", "Home")">
-                                        <i class="glyphicon glyphicon-shopping-cart"></i><span> Giỏ hàng</span></a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("EditAbout", "Home", new
+            </ul>
+        </div>
+    </div>
+    <!-- topbar ends -->
+    <div class="ch-container">
+        <div class="row">
+
+            <!-- left menu starts -->
+            <div class="col-sm-2 col-lg-2">
+                <div class="sidebar-nav">
+                    <div class="nav-canvas">
+                        <div class="nav-sm nav nav-stacked">
+                        </div>
+                        <ul class="nav nav-pills nav-stacked main-menu">
+                            <li class="nav-header">Chức năng</li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("Index", "Home")">
+                                    <i class="glyphicon glyphicon-home"></i><span> Trang chủ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("Tour", "Home")">
+                                    <i class="glyphicon glyphicon-list-alt"></i><span> Danh sách tour</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("CreateTour", "Home")">
+                                    <i class="glyphicon glyphicon-plus-sign"></i><span> Thêm tour</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("OrderList", "Home")">
+                                    <i class="glyphicon glyphicon-shopping-cart"></i><span> Giỏ hàng</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("EditAbout", "Home", new
                                                                {
                                                                    id = 1
                                                                })">
-                                        <i class="glyphicon glyphicon-eye-open"></i><span> Giới thiệu</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("ListContact", "Home")">
-                                        <i class="glyphicon glyphicon-envelope"></i><span> Danh sách liên hệ</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("Banner", "Home")">
-                                        <i class="glyphicon glyphicon-envelope"></i><span> Banner</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a class="ajax-link" href="@Url.Action("SettingAccount", "Home")">
-                                        <i class="glyphicon glyphicon-user"></i><span> Account</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                                    <i class="glyphicon glyphicon-eye-open"></i><span> Giới thiệu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("ListContact", "Home")">
+                                    <i class="glyphicon glyphicon-envelope"></i><span> Danh sách liên hệ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("Banner", "Home")">
+                                    <i class="glyphicon glyphicon-envelope"></i><span> Banner</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="ajax-link" href="@Url.Action("SettingAccount", "Home")">
+                                    <i class="glyphicon glyphicon-user"></i><span> Account</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!--/span-->
-                <!-- left menu ends -->
-                <noscript>
-                    <div class="alert alert-block col-md-12">
-                        <h4 class="alert-heading">Warning!</h4>
-                        <p>
-                            You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                            enabled to use this site.
-                        </p>
-                    </div>
-                </noscript>
-                <div id="content" class="col-lg-10 col-sm-10">
-                    <!-- content starts -->
-                    @RenderBody()
+            </div>
+            <!--/span-->
+            <!-- left menu ends -->
+            <noscript>
+                <div class="alert alert-block col-md-12">
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p>
+                        You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                        enabled to use this site.
+                    </p>
+                </div>
+            </noscript>
+            <div id="content" class="col-lg-10 col-sm-10">
+                <!-- content starts -->
+                @RenderBody()
 
 
-                    <!-- content ends -->
-                </div><!--/#content.col-md-0-->
-            </div><!--/fluid-row-->
+                <!-- content ends -->
+            </div><!--/#content.col-md-0-->
+        </div><!--/fluid-row-->
 
-            <footer class="panel-footer navbar-fixed-bottom">
+        <footer class="panel-footer navbar-fixed-bottom">
 
-                &copy; <a href="http://usman.it" target="_blank">
-                    ThachSungDo
-                </a> 2017
+            &copy; <a href="http://usman.it" target="_blank">
+                ThachSungDo
+            </a> 2017
 
-            </footer>
-        </div><!--/.fluid-container-->
-        <!-- external javascript -->
-        <script src="~/Areas/Admin/Content/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- library for cookie management -->
-        <script src="~/Areas/Admin/Content/js/jquery.cookie.js"></script>
-        <!-- calender plugin -->
-        <script src="~/Areas/Admin/Content/bower_components/moment/min/moment.min.js"></script>
-        <script src="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
-        <!-- data table plugin -->
-        <script src="~/Areas/Admin/Content/js/jquery.dataTables.min.js"></script>
-        <!-- select or dropdown enhancer -->
-        <script src="~/Areas/Admin/Content/bower_components/chosen/chosen.jquery.min.js"></script>
-        <!-- plugin for gallery image view -->
-        <script src="~/Areas/Admin/Content/bower_components/colorbox/jquery.colorbox-min.js"></script>
-        <!-- notification plugin -->
-        <script src="~/Areas/Admin/Content/js/jquery.noty.js"></script>
-        <!-- library for making tables responsive -->
-        <script src="~/Areas/Admin/Content/bower_components/responsive-tables/responsive-tables.js"></script>
-        <!-- tour plugin -->
-        <script src="~/Areas/Admin/Content/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
-        <!-- star rating plugin -->
-        <script src="~/Areas/Admin/Content/js/jquery.raty.min.js"></script>
-        <!-- for iOS style toggle switch -->
-        <script src="~/Areas/Admin/Content/js/jquery.iphone.toggle.js"></script>
-        <!-- autogrowing textarea plugin -->
-        <script src="~/Areas/Admin/Content/js/jquery.autogrow-textarea.js"></script>
-        <!-- multiple file upload plugin -->
-        <script src="~/Areas/Admin/Content/js/jquery.uploadify-3.1.min.js"></script>
-        <!-- history.js for cross-browser state change on ajax -->
-        <script src="~/Areas/Admin/Content/js/jquery.history.js"></script>
-        <!-- application script for Charisma demo -->
-        <script src="~/Areas/Admin/Content/js/charisma.js"></script>
+        </footer>
+    </div><!--/.fluid-container-->
+    <!-- external javascript -->
+    <script src="~/Areas/Admin/Content/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- library for cookie management -->
+    <script src="~/Areas/Admin/Content/js/jquery.cookie.js"></script>
+    <!-- calender plugin -->
+    <script src="~/Areas/Admin/Content/bower_components/moment/min/moment.min.js"></script>
+    <script src="~/Areas/Admin/Content/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <!-- data table plugin -->
+    <script src="~/Areas/Admin/Content/js/jquery.dataTables.min.js"></script>
+    <!-- select or dropdown enhancer -->
+    <script src="~/Areas/Admin/Content/bower_components/chosen/chosen.jquery.min.js"></script>
+    <!-- plugin for gallery image view -->
+    <script src="~/Areas/Admin/Content/bower_components/colorbox/jquery.colorbox-min.js"></script>
+    <!-- notification plugin -->
+    <script src="~/Areas/Admin/Content/js/jquery.noty.js"></script>
+    <!-- library for making tables responsive -->
+    <script src="~/Areas/Admin/Content/bower_components/responsive-tables/responsive-tables.js"></script>
+    <!-- tour plugin -->
+    <script src="~/Areas/Admin/Content/bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+    <!-- star rating plugin -->
+    <script src="~/Areas/Admin/Content/js/jquery.raty.min.js"></script>
+    <!-- for iOS style toggle switch -->
+    <script src="~/Areas/Admin/Content/js/jquery.iphone.toggle.js"></script>
+    <!-- autogrowing textarea plugin -->
+    <script src="~/Areas/Admin/Content/js/jquery.autogrow-textarea.js"></script>
+    <!-- multiple file upload plugin -->
+    <script src="~/Areas/Admin/Content/js/jquery.uploadify-3.1.min.js"></script>
+    <!-- history.js for cross-browser state change on ajax -->
+    <script src="~/Areas/Admin/Content/js/jquery.history.js"></script>
+    <!-- application script for Charisma demo -->
+    <script src="~/Areas/Admin/Content/js/charisma.js"></script>
+    
 
-    </body>
+    @RenderSection("jFooter", required:false)
+</body>
 </html>

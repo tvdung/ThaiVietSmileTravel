@@ -360,4 +360,13 @@
   <data name="SearchTourNotFound" xml:space="preserve">
     <value>Không tồn tại tour này. Vui lòng tìm kiếm tour khác</value>
   </data>
+  <data name="titleOrderFailed" xml:space="preserve">
+    <value>Đặt tour không thành công</value>
+  </data>
+  <data name="titleTourDetail" xml:space="preserve">
+    <value>Chi tiết tour</value>
+  </data>
+  <data name="titleSuccess" xml:space="preserve">
+    <value>Thành công</value>
+  </data>
 </root>

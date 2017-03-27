@@ -4,7 +4,6 @@ using System.Linq;
 using System.Net;
 using System.Net.Mail;
 
-using ThaiVietSmileTravel.Globalization;
 using ThaiVietSmileTravel.Models.Framework;
 
 namespace ThaiVietSmileTravel.Common
@@ -18,10 +17,9 @@ namespace ThaiVietSmileTravel.Common
             var tblAdministrator = admin.FirstOrDefault();
             if (tblAdministrator != null)
             {
-                var fromEmailAddress = tblAdministrator.Email; // ConfigurationManager.AppSettings["FromEmailAddress"].ToString();
+                var fromEmailAddress = tblAdministrator.Email; 
 
-                //var toEmailAddress = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
-                var fromEmailPassword = CommonHelper.Decrypt(tblAdministrator.PasswordEmail, true); //ConfigurationManager.AppSettings["FromEmailPassword"].ToString();
+                var fromEmailPassword = CommonHelper.Decrypt(tblAdministrator.PasswordEmail, true);
                 if (contact)
                 {
                     if (custom == false)
