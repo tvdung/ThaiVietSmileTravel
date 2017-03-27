@@ -2408,7 +2408,6 @@
     <Content Include="Areas\Admin\Views\Home\Banner.cshtml" />
     <Content Include="Areas\Admin\Views\Home\EditBanner.cshtml" />
     <Content Include="Areas\Admin\Content\files\Yêu cầu cần có trong website TVS Travel.doc" />
-    <Content Include="Areas\Admin\Content\ckfinder_Backup.zip" />
     <Content Include="Areas\Admin\Content\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
     <Content Include="Areas\Admin\Content\ckfinder\userfiles\.htaccess" />
     <Content Include="Areas\Admin\Content\ckfinder\skins\bootstrap\assets\fonts\glyphicons-halflings-regular.eot" />
