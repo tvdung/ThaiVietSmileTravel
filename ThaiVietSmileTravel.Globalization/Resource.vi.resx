@@ -369,4 +369,7 @@
   <data name="titleSuccess" xml:space="preserve">
     <value>Thành công</value>
   </data>
+  <data name="lblNotTour" xml:space="preserve">
+    <value>Không có tour trong danh mục này</value>
+  </data>
 </root>

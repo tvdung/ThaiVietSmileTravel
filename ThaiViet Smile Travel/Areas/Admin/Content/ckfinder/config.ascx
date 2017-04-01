@@ -71,8 +71,8 @@
 		// Set the maximum size of uploaded images. If an uploaded image is
 		// larger, it gets scaled down proportionally. Set to 0 to disable this
 		// feature.
-		Images.MaxWidth = 1600;
-		Images.MaxHeight = 1200;
+		Images.MaxWidth = 4000;
+		Images.MaxHeight = 3000;
 		Images.Quality = 80;
 
 		// Indicates that the file size (MaxSize) for images must be checked only
@@ -173,7 +173,7 @@
 		type = ResourceType.Add( "Images" );
 		type.Url = BaseUrl + "images/";
 		type.Dir = BaseDir == "" ? "" : BaseDir + "images/";
-		type.MaxSize = 0;
+		type.MaxSize = 5000;
 		type.AllowedExtensions = new string[] { "bmp", "gif", "jpeg", "jpg", "png" };
 		type.DeniedExtensions = new string[] { };
 

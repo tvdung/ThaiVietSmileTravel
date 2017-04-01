@@ -369,4 +369,7 @@
   <data name="titleSuccess" xml:space="preserve">
     <value>ประสบความสำเร็จ</value>
   </data>
+  <data name="lblNotTour" xml:space="preserve">
+    <value>ไม่เกี่ยวกับการท่องเที่ยวในหมวดหมู่นี้</value>
+  </data>
 </root>

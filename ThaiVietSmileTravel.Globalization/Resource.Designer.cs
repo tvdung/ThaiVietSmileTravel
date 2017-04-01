@@ -344,6 +344,15 @@ namespace ThaiVietSmileTravel.Globalization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ไม่เกี่ยวกับการท่องเที่ยวในหมวดหมู่นี้.
+        /// </summary>
+        public static string lblNotTour {
+            get {
+                return ResourceManager.GetString("lblNotTour", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to จำนวน.
         /// </summary>
         public static string lblNumberCustom {

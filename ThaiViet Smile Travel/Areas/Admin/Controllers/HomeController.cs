@@ -1,37 +1,43 @@
 ﻿using System;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Web.Mvc;
-using System.Web.Security;
-
-using ThaiVietSmileTravel.Models;
 using ThaiVietSmileTravel.Models.Framework;
 
 using ThaiViet_Smile_Travel.Areas.Admin.Code;
 using ThaiViet_Smile_Travel.Areas.Admin.Models;
 using System.Net;
 using System.Data.Entity;
-using System.Security.Cryptography;
-using System.Text;
+using System.Web.Security;
+using System.Web;
 
 namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 {
+    
     public class HomeController : Controller
     {
         private TVSTravelDbContext db = new TVSTravelDbContext();
 
         // GET: Admin/Home
+        
         public ActionResult Index()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View();
         }
 
         public ActionResult Login()
         {
+            if (Request.Cookies["Login"] != null)
+            {
+              return RedirectToAction("Index");
+            }
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel model)
         {
@@ -44,10 +50,14 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
                 if (result != null)
                 {
-                    SessionHelper.SetSession(new UserSession()
-                    {
-                        UserName = model.UserName
-                    });
+                    FormsAuthentication.SetAuthCookie(model.UserName, true);
+                    Session["UserId"] = result.UserId;
+                    Session.Timeout = 50;
+                    HttpCookie cookie = new HttpCookie("Login");
+                        cookie.Values.Add("UserName", model.UserName);
+                        cookie.Values.Add("Password", model.Password);
+                        cookie.Expires = DateTime.Now.AddDays(15);
+                        Response.Cookies.Add(cookie);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -64,20 +74,30 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
         public ActionResult Logout()
         {
-            SessionHelper.SetSession(null);
+            Response.Cookies["Login"].Expires = DateTime.Now.AddDays(-1);
             return RedirectToAction("Login", "Home");
         }
 
+        
         public ActionResult Tour()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             var model = db.tbl_Tour.ToList();
             return View(model);
         }
 
 
         //Tạo mới tour
+        
         public ActionResult CreateTour()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View();
         }
 
@@ -96,8 +116,13 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
         }
 
         //Edit tour
+        
         public ActionResult EditTour(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -128,6 +153,10 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             tbl_Tour tbl_Tour = db.tbl_Tour.Find(id);
             if (tbl_Tour.IsActive)
                 tbl_Tour.IsActive = false;
@@ -139,8 +168,13 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
         }
 
         //Edit tour
+        
         public ActionResult EditAbout(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -168,14 +202,23 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
             return View(tbl_About);
         }
 
+        
         public ActionResult SettingAccount()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View(db.tbl_Account.ToList());
         }
 
-
+        
         public ActionResult EditAccount(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -223,13 +266,23 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
         //}
 
         //giỏ hàng
+        
         public ActionResult OrderList()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View(db.tbl_Orders.ToList().OrderByDescending(x => x.NgayDat));
         }
 
+        
         public ActionResult OrderDetails(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -244,6 +297,10 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
         public ActionResult UpdateStatusOrder(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -267,13 +324,22 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
 
         //danh sach lien he
+        
         public ActionResult ListContact()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View(db.tbl_Contact.ToList());
         }
 
         public ActionResult UpdateStatusContact(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -297,13 +363,22 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
 
 
         //Banner
+        
         public ActionResult Banner()
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             return View(db.tbl_Banner.ToList());
         }
 
         public ActionResult UpdateStatusBanner(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -325,8 +400,13 @@ namespace ThaiVietSmileTravel.Areas.Admin.Controllers
             return View("Banner", model);
         }
 
+        
         public ActionResult EditBanner(int? id)
         {
+            if (Request.Cookies["Login"] == null)
+            {
+                return RedirectToAction("Login");
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);

@@ -369,4 +369,7 @@
   <data name="titleSuccess" xml:space="preserve">
     <value>Success</value>
   </data>
+  <data name="lblNotTour" xml:space="preserve">
+    <value>There are no tours in this category</value>
+  </data>
 </root>

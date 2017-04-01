@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
+using System.Web.Mvc;
 
 namespace ThaiViet_Smile_Travel.Areas.Admin.Code
 {
-    public class SessionHelper
+    public class SessionTimeoutAttribute : ActionFilterAttribute
     {
-        public static void SetSession(UserSession session)
+        public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            HttpContext.Current.Session["loginSession"] = session;
-        }
-
-        public static UserSession GetSession()
-        {
-            var session = HttpContext.Current.Session["loginSession"];
-            if (session == null)
-                return null;
-            else
+            if (HttpContext.Current.Session["UserId"] == null)
             {
-                return session as UserSession;
+                filterContext.Result = new RedirectResult("~/Admin/Home/Login");
+                return;
             }
+            base.OnActionExecuting(filterContext);
         }
     }
 }

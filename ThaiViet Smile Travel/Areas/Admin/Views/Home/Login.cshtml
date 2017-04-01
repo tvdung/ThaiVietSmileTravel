@@ -1,12 +1,10 @@
-﻿@using System.Web.UI.WebControls
-@using Microsoft.Ajax.Utilities
-@using ThaiViet_Smile_Travel.Areas.Admin.Code
+﻿
 @model ThaiViet_Smile_Travel.Areas.Admin.Models.LoginModel
 @{
     Layout = null;
 }
 @{
-    if (SessionHelper.GetSession() != null)
+    if (Session["UserId"] != null)
     {
         Response.Redirect(Url.Action("Index", "Home"));
     }
@@ -71,7 +69,6 @@
                                             @placeholder = "vui lòng nhập tên tài khoản",
                                             @autofocus = "autofocus"
                                         })
-                                        @*<input type="text" name="form-username" placeholder="vui lòng nhập tên tài khoản" class="form-username form-control" id="form-username">*@
                                     </div>
                                     <div class="form-group">
                                         <label class="sr-only">Password</label>
@@ -81,7 +78,10 @@
                                             @placeholder = "Vui lòng nhập mật khẩu",
                                             @type = "password"
                                         })
-                                        @*<input type="password" name="form-password" placeholder="Vui lòng nhập mật khẩu" class="form-password form-control" id="form-password">*@
+                                        @*<div class="editor-label">
+                                            @Html.CheckBoxFor(u => u.RememberMe)
+                                            @Html.LabelFor(u => u.RememberMe)
+                                        </div>*@
                                     </div>
                                     <button type="submit" class="btn" style="width: 100%;">Đăng nhập</button>
                                 </form>

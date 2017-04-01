@@ -1,10 +1,4 @@
 ﻿@using ThaiViet_Smile_Travel.Areas.Admin.Code
-@{
-    if (SessionHelper.GetSession() == null)
-    {
-        Response.Redirect(Url.Action("Login", "Home"));
-    }
-}
 
 <!DOCTYPE html>
 <html>
