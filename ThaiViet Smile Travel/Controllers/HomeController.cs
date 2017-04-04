@@ -32,10 +32,11 @@ namespace ThaiViet_Smile_Travel.Controllers
                 }
                 else
                 {
-                    result = db.tbl_Tour
+                    var query = db.tbl_Tour
                         .Where(x => x.IsActive)
                         .OrderByDescending(x => x.NgayTao)
-                        .ToPagedList(page, pageSize);
+                        .ToList();
+                    result = query.ToPagedList(page, pageSize);
                 }
                 if (result.Count == 0)
                 {

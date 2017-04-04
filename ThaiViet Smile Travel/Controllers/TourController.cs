@@ -23,10 +23,11 @@ namespace ThaiViet_Smile_Travel.Controllers
                 if (category != null)
                 {
                     ViewBag.TitleCategory = category.TenVN;
-                    var results = db.tbl_Tour
+                    var query = db.tbl_Tour
                         .Where(x => x.CategoryId == categoryId && x.IsActive)
                         .OrderByDescending(x => x.NgayTao)
-                        .ToPagedList(page, pageSize);
+                        .ToList();
+                    var results = query.ToPagedList(page, pageSize);
                     return View(results);
                 }
                 else
